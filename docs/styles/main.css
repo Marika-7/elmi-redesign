@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.header {
+  height: 72px;
+  background-color: pink;
+}
+
+.footer {
+  height: 80px;
+  background-color: lightgreen;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #FBFBFB;
+  color: #1F253B;
+}
+
+.main {
+  min-height: calc(100vh - 152px);
+  background-color: bisque;
+}

@@ -1,0 +1,66 @@
+-------------------- questions to Inesa --------------------
+
+  header
+    fixed?
+  nav
+    is submenu float?
+
+  text button
+    які варіанти для desktop,які для mobile?
+  language button
+    який варіант для якої ситуації
+    як має працювати
+  input
+    колір текста при введені
+    перевіряється при втраті фокусу
+  images
+    чи потрібно стискати, чи вона це вже зробила
+  svg for background
+    як має виглядати на екрані більше 1440px
+
+-------------------- task --------------------
+
+  header
+    logo
+    nav
+      submenu 1
+      submenu 2
+    lang
+    button
+
+  footer
+  home
+
+  --------------------
+
+  styles
+    buttons
+    inputs
+  images
+    get images
+    test svg for background
+  components
+    header
+    footer
+  
+  final
+    delete test.pug, test.scss, test colors comments
+
+-------------------- git --------------------
+
+  git commit -m "first commit"
+  git commit -m "gulp, create project"
+
+-------------------- npm --------------------
+
+  npm init
+
+  npm i -D gulp
+  npm i -D gulp-pug
+  npm i -D sass gulp-sass gulp-autoprefixer
+  npm i -D gulp-babel @babel/core @babel/preset-env
+  npm i -D gulp-concat gulp-uglify
+  npm i -D browser-sync gulp-clean
+  npm i -D gulp-svg-sprite
+
+  gulp

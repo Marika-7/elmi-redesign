@@ -1,0 +1,18 @@
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/test';
+// @import 'components/';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $white;
+  color: $black;
+}
+
+.main {
+  min-height: calc(100vh - (72px + 80px));
+  background-color: $test-bi;
+}
