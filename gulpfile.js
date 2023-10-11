@@ -48,7 +48,8 @@ function deleteBuild(cb) {
   return src([
     'docs/**/*.*', 
     '!docs/fonts/*.*',
-    '!docs/images/*.*'
+    '!docs/images/*.*',
+    '!docs/robots.txt'
   ])
     .pipe(clean());
 }
@@ -68,7 +69,7 @@ function sprite() {
         // sprite: 'icons-sprite.svg'
       }
     }))
-    .pipe(dest('src/images'));
+    .pipe(dest('src/images/icons'));
 }
 
 exports.html = html;

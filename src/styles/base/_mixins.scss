@@ -12,6 +12,7 @@
 //  769 - 1279  Laptops, larger tablets in landscape, and small desktop
 // 1280+        Larger desktop and monitors
 
+// desktop
 // @mixin screen-1600 {
 //   @media screen and (max-width: 1600px) {
 //     @content;
@@ -30,11 +31,12 @@
 //   }
 // }
 
-// @mixin screen-1024 {
-//   @media screen and (max-width: 1023px) {
-//     @content;
-//   }
-// }
+// tablet
+@mixin screen-1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
 
 // @mixin screen-768 {
 //   @media screen and (max-width: 768px) {
@@ -42,6 +44,7 @@
 //   }
 // }
 
+// mobile
 // @mixin screen-640 {
 //   @media screen and (max-width: 640px) {
 //     @content;
@@ -60,8 +63,8 @@
 //   }
 // }
 
-// @mixin font($s, $w, $l) {
-//   font-size: $s;
-//   font-weight: $w;
-//   line-height: $l;
-// }
+@mixin font($s, $w, $l) {
+  font-size: $s;
+  font-weight: $w;
+  line-height: $l;
+}

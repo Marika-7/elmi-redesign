@@ -7,12 +7,6 @@
 
   text button
     які варіанти для desktop,які для mobile?
-  language button
-    який варіант для якої ситуації
-    як має працювати
-  input
-    колір текста при введені
-    перевіряється при втраті фокусу
   images
     чи потрібно стискати, чи вона це вже зробила
   svg for background
@@ -38,6 +32,9 @@
     inputs
   images
     get images
+      favicon
+      photo
+      icons
     test svg for background
   components
     header
@@ -50,6 +47,7 @@
 
   git commit -m "first commit"
   git commit -m "gulp, create project"
+  git commit -m "global styles, buttons, inputs"
 
 -------------------- npm --------------------
 

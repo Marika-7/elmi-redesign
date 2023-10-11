@@ -3,3 +3,52 @@ extends components/layout
 block content
   main.main
     h1 Test page
+
+    //- section.section1 
+    div.test-btn
+      button.btn-main Записаться на консультацию
+      button.btn-main(disabled) Записаться на консультацию
+      button.btn-secondary Оставить заявку
+      button.btn-secondary(disabled) Оставить заявку
+      button.btn-text Подробнее
+        svg.sprite
+          use(href="./images/sprite.svg#right")
+      button.btn-text.btn-text_arrow(disabled) Подробнее
+        svg.sprite
+          use(href="./images/sprite.svg#right")
+      button.btn-text Подробнее
+      button.btn-text(disabled) Подробнее
+      .lang
+        button.lang__btn_small(id="lang-header")
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+        ul.lang__menu1.menu_hide(id="lang-header-menu")
+          li.lang__item1.lang__active1 Русский
+          li.lang__item1 עברית
+      .lang
+        button.lang__btn_small(disabled)
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+      .lang
+        button.lang__btn_large(id="lang-footer")
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+          span Русский
+          svg.sprite
+            use(href="./images/sprite.svg#down")
+        ul.lang__menu2.menu_hide(id="lang-footer-menu")
+          li.lang__item2 עברית
+          li.lang__item2.lang__active2 Русский
+      .lang
+        button.lang__btn_large(disabled)
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+          span Русский
+          svg.sprite
+            use(href="./images/sprite.svg#down")
+      label.label
+        input.input(id="name" placeholder='Имя*')
+        span.text-error Error
+      label.label
+        input.input(disabled)
+        span.text-error Error
