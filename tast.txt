@@ -48,6 +48,7 @@
   git commit -m "first commit"
   git commit -m "gulp, create project"
   git commit -m "global styles, buttons, inputs"
+  git commit -m "header"
 
 -------------------- npm --------------------
 

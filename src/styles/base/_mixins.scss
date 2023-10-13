@@ -25,11 +25,17 @@
 //   }
 // }
 
-// @mixin screen-1280 {
-//   @media screen and (max-width: 1279px) {
-//     @content;
-//   }
-// }
+@mixin screen-1280 {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin screen-1100 {
+  @media screen and (max-width: 1110px) {
+    @content;
+  }
+}
 
 // tablet
 @mixin screen-1024 {
@@ -51,11 +57,11 @@
 //   }
 // }
 
-// @mixin screen-480 {
-//   @media screen and (max-width: 479px) {
-//     @content;
-//   }
-// }
+@mixin screen-480 {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
 
 // @mixin screen-360 {
 //   @media screen and (max-width: 360) {

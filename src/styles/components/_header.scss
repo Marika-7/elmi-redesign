@@ -1,8 +1,303 @@
 .header {
-  height: 72px;
-  background-color: $test-p;
+  width: 100%;
+  background-color: $purple02;
+  box-shadow: 
+    0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
+    0px 0px 4px 0px rgba(74, 82, 111, 0.04);
+  position: fixed;
+  z-index: 2;
+  &__content {
+    width: 100%;
+    max-width: 1440px;
+    height: 88px;
+    margin: 0 auto;
+    padding: 0 9.5vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto repeat(3, max-content);
+    column-gap: 1.2vh;
+    @include screen-1100 {
+      column-gap: 1vh;
+    }
+    @include screen-1280 {
+      padding: 0 4vh;
+    }
+    @include screen-1100 {
+      padding: 0 3vh;
+    }
+    @include screen-1024 {
+      height: 56px;
+      padding: 0 15px;
+      grid-template-columns: auto repeat(2, max-content);
+      column-gap: 40px;
+    }
+    @include screen-480 {
+      min-height: 56px;
+      padding: 0 16px;
+      grid-template-columns: auto max-content;
+      column-gap: 40px;
+    }
+  }
+}
+
+// ---------- Logo ----------
+
+.logo {
+  &__img {
+    width: 111px;
+    @include screen-1100 {
+      width: 100px;
+    }
+    @include screen-1024 {
+      width: 76px;
+      height: 32px;
+    }
+  }
+  &__text {
+    width: 115px;
+    color: $red_logo;
+    @include font(8px, 500, 150%);
+    text-transform: uppercase;
+    @include screen-1100 {
+      font-size: 7px;
+    }
+    @include screen-1024 {
+      display: none;
+    }
+  }
+}
+
+// ---------- Nav ----------
+
+.nav {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  column-gap: 40px;
+  column-gap: 1.2vh;
+  @include screen-1100 {
+    column-gap: 1vh;
+  }
+  @include screen-1024 {
+    display: none;
+  }
+  &__link {
+    margin-bottom: 20px;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    @include font(12px, 700, 120%);
+    text-transform: uppercase;
+    transition: all $time_change_color;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    cursor: pointer;
+    @include screen-1280 {
+      font-size: 11px;
+    }
+    @include screen-1100 {
+      font-size: 10px;
+    }
+    .sprite {
+      stroke: $black;
+    }
+  }
+  &__active {
+    color: $red;
+    border-bottom: 2px solid $red;
+    .sprite {
+      stroke: $red;
+    }
+  }
+}
+
+.nav__link:hover, 
+.submenu:hover>.nav__link {
+  color: $red;
+  border-bottom: 2px solid $red;
+  .sprite {
+    stroke: $red;
+    transform: rotate(180deg);
+  }
+}
+
+.submenu {
+  display: flex;
+  align-items: center;
+  &:has(&__list1) {
+    position: relative;
+  }
+  &__list1 {
+    width: 222px;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: $purple02;
+    box-shadow: 
+      0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
+      0px 0px 4px 0px rgba(74, 82, 111, 0.04);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: absolute;
+    left: -13px;
+    top: 48px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover &__list1 {
+    margin-top: 5px;
+    opacity: 1;
+    visibility: visible;
+    transition: all $time_show_menu;
+  }
+  &__link {
+    border-bottom: 1px solid transparent;
+    color: $black;
+    @include font(14px, 400, 150%);
+    &:hover {
+      border-bottom: 1px solid $purple06;
+      color: $purple06;
+    }
+  }
+  &__active {
+    color: $purple06;
+    border-bottom: 1px solid $purple06;
+  }
+  &__content {
+    width: 100%;
+    max-width: 1440px;
+    height: 132px;
+    margin: 0 auto;
+    padding: 24px 9.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 16px 12vh;
+    @include screen-1280 {
+      padding: 24px 4vh;
+    }
+    @include screen-1280 {
+      padding: 24px 3vh;
+    }
+  }
+  &__list2 {
+    width: 100vw;
+    margin-top: 35px;
+    background-color: $white;
+    border-top: 1px solid $purple03;
+    box-shadow: 
+      0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
+      0px 0px 4px 0px rgba(74, 82, 111, 0.04);
+    position: absolute;
+    top: 65px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  & li:nth-child(1) {
+    height: 64px;
+  }
+    .submenu__link {
+      padding: 4px 0;
+      font-size: 16px;
+      color: $purple06;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      @include screen-1280 {
+        font-size: 14px;
+      }
+    }
+    .sprite {
+      stroke: $gray;
+    }
+  }
+  &:hover &__list2 {
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+  }
+}
+
+// ---------- Language ----------
+
+.lang {
+  position: relative;
+  cursor: pointer;
+  &__menu1 {
+    width: 100px;
+    padding: 12px;
+    background-color: $purple02;
+    border-radius: 4px;
+    box-shadow: 
+      0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
+      0px 0px 4px 0px rgba(74, 82, 111, 0.04);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    position: absolute;
+    left: -12px;
+    transition: all $time_show_menu;
+    z-index: 1;
+  }
+  &__item1 {
+    border-bottom: 1px solid transparent;
+    @include font(16px, 500, 150%);
+    &:hover {
+      color: $purple06;
+      border-bottom-color: $purple06;
+    }
+  }
+  &__active1 {
+    color: $purple06;
+  }
+  &:has(&__menu1) {
+    @include screen-1024 {
+      display: none;
+    }
+    .menu_hide {
+      margin-top: 40px;
+    }
+    .menu_show {
+      margin-top: 10px;
+    }
+  }
+}
+
+// ---------- button-secondary ----------
+
+.header .btn-secondary {
+  @include screen-480 {
+    display: none;
+  }
+}
+
+// ---------- Mobile-menu ----------
+
+.mobile-menu {
+  display: none;
+  @include screen-1024 {
+    display: inline-block;
+  }
+  .sprite {
+    width: 24px;
+    height: 24px;
+    stroke: $purple06;
+  }
+  &:hover {
+    .sprite {
+      stroke: $purple04;
+    }
+  }
+  // &:active {
+  //   sprite {
+  //     stroke: $purple06;
+  //   }
+  // }
+  // &:disabled {
+  //   opacity: 0.5;
+  //   .svg-sprite {
+  //     stroke: $purple09;
+  //   }
+  // }
 }

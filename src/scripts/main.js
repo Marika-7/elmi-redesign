@@ -1,2 +1,2 @@
 'use strict';
-console.log('Test - main.js');
+// console.log('Test - main.js');

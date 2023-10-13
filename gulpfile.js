@@ -49,7 +49,8 @@ function deleteBuild(cb) {
     'docs/**/*.*', 
     '!docs/fonts/*.*',
     '!docs/images/*.*',
-    '!docs/robots.txt'
+    '!docs/robots.txt',
+    '!docs/favicon.png'
   ])
     .pipe(clean());
 }
