@@ -14,70 +14,56 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__content"><a class="logo" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo">
-          <p class="logo__text">Центр создания семьи</p></a>
-        <nav class="nav"><a class="nav__link nav__active" href="index.html">Главная</a><a class="nav__link" href="#">О нас</a>
-          <div class="submenu"><span class="nav__link">Знакомства для брака
+      <div class="content">
+        <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
+          <p class="logo__text">Центр создания семьи</p>
+        </div>
+        <div class="header__right">
+          <ul class="nav">
+            <li class="menu-item current_page_item"><a href="index.html">Главная</a></li>
+            <li class="menu-item"><a href="#">О нас</a></li>
+            <li class="menu-item menu-item-has-children"><a href="#">Знакомства для брака</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="#">Знакомства для серьезных отношений</a></li>
+                <li class="menu-item"><a href="#">Знакомства 20-30</a></li>
+                <li class="menu-item"><a href="#">Знакомства за 30</a></li>
+                <li class="menu-item"><a href="#">Знакомства за 40</a></li>
+                <li class="menu-item"><a href="#">Знакомства за 50</a></li>
+                <li class="menu-item"><a href="#">Знакомства за 60+</a></li>
+                <li class="menu-item"><a href="#">Брачное агентство в Израиле</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children"><a href="#">Знакомства в Израиле</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="#">Знакомства в Израиле на русском языке</a></li>
+                <li class="menu-item"><a href="#">Знакомства в Хайфе</a></li>
+                <li class="menu-item"><a href="#">Знакомства в Тель-Авиве</a></li>
+                <li class="menu-item"><a href="#">Знакомства в Нетании</a></li>
+                <li class="menu-item"><a href="#">Знакомства в Ашдоде</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="#">Блог</a></li>
+            <li class="menu-item"><a href="#">Отзывы</a></li>
+            <li class="menu-item"><a href="#">Контакты</a></li>
+          </ul>
+          <div class="lang">
+            <button class="lang__btn_small" id="lang-header">
               <svg class="sprite">
-                <use href="./images/sprite.svg#down"></use>
-              </svg></span>
-            <ul class="submenu__list1">
-              <li><a class="submenu__link">Знакомства для серьезных отношений</a></li>
-              <li><a class="submenu__link submenu__active">Знакомства 20-30</a></li>
-              <li><a class="submenu__link">Знакомства за 30</a></li>
-              <li><a class="submenu__link">Знакомства за 40</a></li>
-              <li><a class="submenu__link">Знакомства за 50</a></li>
-              <li><a class="submenu__link">Знакомства за 60+</a></li>
-              <li><a class="submenu__link">Брачное агентство в Израиле</a></li>
+                <use href="./images/sprite.svg#earth"></use>
+              </svg>
+            </button>
+            <ul class="lang__menu1 menu_hide" id="lang-header-menu">
+              <li class="lang__item1 lang__active1">Русский</li>
+              <li class="lang__item1">עברית </li>
             </ul>
           </div>
-          <div class="submenu"><span class="nav__link">Знакомства в Израиле
-              <svg class="sprite">
-                <use href="./images/sprite.svg#down"></use>
-              </svg></span>
-            <ul class="submenu__list2">
-              <div class="submenu__content">
-                <li><a class="submenu__link"> 
-                    <svg class="sprite"> 
-                      <use href="./images/sprite.svg#map"></use>
-                    </svg><span>Знакомства в Израиле на русском языке</span></a></li>
-                <li><a class="submenu__link"> 
-                    <svg class="sprite"> 
-                      <use href="./images/sprite.svg#map-pin"></use>
-                    </svg><span>Знакомства в Хайфе</span></a></li>
-                <li><a class="submenu__link"> 
-                    <svg class="sprite"> 
-                      <use href="./images/sprite.svg#map-pin"></use>
-                    </svg><span>Знакомства в Тель-Авиве</span></a></li>
-                <li><a class="submenu__link"> 
-                    <svg class="sprite"> 
-                      <use href="./images/sprite.svg#map-pin"></use>
-                    </svg><span>Знакомства в Нетании</span></a></li>
-                <li><a class="submenu__link"> 
-                    <svg class="sprite"> 
-                      <use href="./images/sprite.svg#map-pin"></use>
-                    </svg><span>Знакомства в Ашдоде</span></a></li>
-              </div>
-            </ul>
-          </div><a class="nav__link" href="#">Блог</a><a class="nav__link" href="#">Отзывы</a><a class="nav__link" href="#">Контакты</a>
-        </nav>
-        <div class="lang">
-          <button class="lang__btn_small" id="lang-header">
-            <svg class="sprite">
-              <use href="./images/sprite.svg#earth"></use>
+          <button class="btn-secondary" id="application">Оставить заявку</button>
+          <button class="mobile-menu">
+            <svg class="sprite"> 
+              <use href="./images/sprite.svg#menu"></use>
             </svg>
           </button>
-          <ul class="lang__menu1 menu_hide" id="lang-header-menu">
-            <li class="lang__item1 lang__active1">Русский</li>
-            <li class="lang__item1">עברית </li>
-          </ul>
         </div>
-        <button class="btn-secondary" id="application">Оставить заявку</button>
-        <button class="mobile-menu">
-          <svg class="sprite"> 
-            <use href="./images/sprite.svg#menu"></use>
-          </svg>
-        </button>
       </div>
     </header>
     <main class="main">
@@ -125,20 +111,62 @@
       </div>
     </main>
     <footer class="footer"> 
-      <p>Footer</p>
-      <div class="lang">
-        <button class="lang__btn_large" id="lang-footer">
-          <svg class="sprite">
-            <use href="./images/sprite.svg#earth"></use>
-          </svg><span>Русский</span>
-          <svg class="sprite">
-            <use href="./images/sprite.svg#down"></use>
-          </svg>
-        </button>
-        <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
-          <li class="lang__item2">עברית</li>
-          <li class="lang__item2 lang__active2">Русский</li>
-        </ul>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
+            <p class="logo__text">Центр создания семьи</p>
+          </div>
+          <div class="footer__center">
+            <div class="footer__contact">
+              <h2 class="footer__title">Контакты</h2>
+              <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
+              <p class="footer__text">054 760 79 40</p>
+              <p class="footer__text">elmi4u@gmail.com</p>
+            </div>
+            <div class="footer__contact">
+              <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
+            </div>
+          </div>
+          <form class="footer__form" name="footer">
+            <h2 class="footer__title">Задать вопрос</h2>
+            <div class="block">
+              <label class="label">
+                <input class="input" name="name" required placeholder="Имя*">
+                <div class="error"><span class="text-error">Error</span></div>
+              </label>
+              <label class="label">
+                <input class="input" name="email" required placeholder="Email*">
+                <div class="error"><span class="text-error">Error</span></div>
+              </label>
+              <label class="label">
+                <input class="input" name="phone" placeholder="Телефон">
+                <div class="error"><span class="text-error">Error</span></div>
+              </label>
+              <label class="label">
+                <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
+                <div class="error"><span class="text-error">Error</span></div>
+              </label>
+            </div>
+            <button class="btn-secondary">Отправить</button>
+          </form>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
+          <div class="lang">
+            <button class="lang__btn_large" id="lang-footer">
+              <svg class="sprite">
+                <use href="./images/sprite.svg#earth"></use>
+              </svg><span>Русский</span>
+              <svg class="sprite">
+                <use href="./images/sprite.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
+              <li class="lang__item2">עברית</li>
+              <li class="lang__item2 lang__active2">Русский</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="./scripts/main.js"></script>

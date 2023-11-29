@@ -155,6 +155,10 @@
   .sprite:first-of-type {
     width: 16px;
     height: 16px;
+    fill: $purple06;
+  }
+  .sprite:last-of-type {
+    stroke: $purple06;
   }
   &:hover {
     border-color: $purple09;

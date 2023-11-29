@@ -1,3 +1,8 @@
+-------------------- questions to Daniil --------------------
+
+  footer form
+    Чи усі поля обов'язкові?
+
 -------------------- questions to Inesa --------------------
 
   header
@@ -14,15 +19,22 @@
 
 -------------------- task --------------------
 
+  pre
+    fonts
+    images
+    svg-sprite
   header
     logo
     nav
       submenu 1
       submenu 2
+        додати іконки
+        поправити translate
     lang
     button
 
   footer
+    incert social links
   home
 
   --------------------
@@ -43,12 +55,41 @@
   final
     delete test.pug, test.scss, test colors comments
 
+-------------------- images --------------------
+
+-------------------- sprite --------------------
+
+  call
+  check-circle
+  chevron-down
+  chevron-left
+  chevron-right
+  chevron-up
+  earth
+  email
+  heart
+  info
+  location
+  map-pin
+  map
+  menu
+  minus
+  person1
+  person2
+  person3
+  plus
+  rings
+  skype
+  user
+  users
+
 -------------------- git --------------------
 
   git commit -m "first commit"
   git commit -m "gulp, create project"
   git commit -m "global styles, buttons, inputs"
   git commit -m "header"
+  git commit -m "edit header; footer"
 
 -------------------- npm --------------------
 

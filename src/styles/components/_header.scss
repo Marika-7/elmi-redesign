@@ -6,43 +6,38 @@
     0px 0px 4px 0px rgba(74, 82, 111, 0.04);
   position: fixed;
   z-index: 2;
-  &__content {
-    width: 100%;
-    max-width: 1440px;
+  .content {
     height: 88px;
-    margin: 0 auto;
-    padding: 0 9.5vh;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    grid-template-columns: auto repeat(3, max-content);
-    column-gap: 1.2vh;
-    @include screen-1100 {
-      column-gap: 1vh;
-    }
+    column-gap: 16px;
     @include screen-1280 {
-      padding: 0 4vh;
-    }
-    @include screen-1100 {
-      padding: 0 3vh;
+      column-gap: 1vw;
     }
     @include screen-1024 {
       height: 56px;
       padding: 0 15px;
-      grid-template-columns: auto repeat(2, max-content);
-      column-gap: 40px;
     }
     @include screen-480 {
       min-height: 56px;
-      padding: 0 16px;
-      grid-template-columns: auto max-content;
-      column-gap: 40px;
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    @include screen-1280 {
+      column-gap: 1vw;
     }
   }
 }
 
 // ---------- Logo ----------
 
-.logo {
+.header .logo {
+  // &__link {}
   &__img {
     width: 111px;
     @include screen-1100 {
@@ -70,63 +65,84 @@
 // ---------- Nav ----------
 
 .nav {
-  margin-top: 20px;
   display: flex;
   align-items: center;
-  column-gap: 1.2vh;
-  @include screen-1100 {
-    column-gap: 1vh;
+  column-gap: 16px;
+  @include screen-1280 {
+    column-gap: 1vw;
   }
   @include screen-1024 {
     display: none;
   }
-  &__link {
-    margin-bottom: 20px;
-    padding: 8px 0;
+  &>.menu-item>a {
+    padding: 21px 0;
     border-bottom: 2px solid transparent;
     @include font(12px, 700, 120%);
     text-transform: uppercase;
     transition: all $time_change_color;
     display: flex;
     align-items: center;
-    column-gap: 4px;
-    cursor: pointer;
     @include screen-1280 {
       font-size: 11px;
     }
     @include screen-1100 {
       font-size: 10px;
     }
-    .sprite {
-      stroke: $black;
-    }
   }
-  &__active {
+  .menu-item:hover>a,
+  .menu-item:has(.sub-menu:hover)>a,
+  .current_page_item>a,
+  .menu-item:has(.current_page_item)>a {
     color: $red;
-    border-bottom: 2px solid $red;
-    .sprite {
-      stroke: $red;
+    border-color: $red;
+  }
+  &>.menu-item-has-children>a {
+    column-gap: 4px;
+    padding-right: 2px;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 2px;
+      border-right: 2px solid $black;
+      border-bottom: 2px solid $black;
+      transform: rotate(45deg);
+      transition: inherit;
+      position: relative;
+      top: -2px;
+      right: -2px;
+      @include screen-1280 {
+        width: 5px;
+        height: 5px;
+        top: -3px;
+      }
+      @include screen-1100 {
+        width: 4px;
+        height: 4px;
+        top: -2px;
+      }
+    }
+  }
+  .current_page_item>a::after,
+  .menu-item:has(.current_page_item)>a::after {
+    border-color: $red;
+  }
+  &>.menu-item-has-children>a:hover::after,
+  .menu-item-has-children:has(.sub-menu:hover)>a::after {
+    border-color: $red;
+    transform: rotate(-135deg);
+    top: 2px;
+    @include screen-1280 {
+      top: 0px;
     }
   }
 }
 
-.nav__link:hover, 
-.submenu:hover>.nav__link {
-  color: $red;
-  border-bottom: 2px solid $red;
-  .sprite {
-    stroke: $red;
-    transform: rotate(180deg);
-  }
-}
-
-.submenu {
-  display: flex;
-  align-items: center;
-  &:has(&__list1) {
-    position: relative;
-  }
-  &__list1 {
+// .menu-item:nth-of-type(3) {
+.menu-item {
+  position: relative;
+  .sub-menu {
     width: 222px;
     padding: 12px;
     margin-top: 30px;
@@ -136,88 +152,102 @@
       0px 0px 4px 0px rgba(74, 82, 111, 0.04);
     display: flex;
     flex-direction: column;
+    align-items: start;
     row-gap: 10px;
     position: absolute;
     left: -13px;
-    top: 48px;
     opacity: 0;
     visibility: hidden;
-  }
-  &:hover &__list1 {
-    margin-top: 5px;
-    opacity: 1;
-    visibility: visible;
-    transition: all $time_show_menu;
-  }
-  &__link {
-    border-bottom: 1px solid transparent;
-    color: $black;
-    @include font(14px, 400, 150%);
-    &:hover {
+    &>.menu-item>a {
+      padding: 0;
+      border-bottom: 1px solid transparent;
+      color: $black;
+      @include font(14px, 400, 150%);
+      text-transform: none;
+    }
+    &>.menu-item>a:hover,
+    .current_page_item>a {
       border-bottom: 1px solid $purple06;
       color: $purple06;
     }
   }
-  &__active {
-    color: $purple06;
-    border-bottom: 1px solid $purple06;
-  }
-  &__content {
-    width: 100%;
-    max-width: 1440px;
-    height: 132px;
-    margin: 0 auto;
-    padding: 24px 9.5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 16px 12vh;
-    @include screen-1280 {
-      padding: 24px 4vh;
-    }
-    @include screen-1280 {
-      padding: 24px 3vh;
-    }
-  }
-  &__list2 {
-    width: 100vw;
-    margin-top: 35px;
-    background-color: $white;
-    border-top: 1px solid $purple03;
-    box-shadow: 
-      0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
-      0px 0px 4px 0px rgba(74, 82, 111, 0.04);
-    position: absolute;
-    top: 65px;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-  & li:nth-child(1) {
-    height: 64px;
-  }
-    .submenu__link {
-      padding: 4px 0;
-      font-size: 16px;
-      color: $purple06;
-      display: flex;
-      align-items: center;
-      column-gap: 8px;
-      @include screen-1280 {
-        font-size: 14px;
-      }
-    }
-    .sprite {
-      stroke: $gray;
-    }
-  }
-  &:hover &__list2 {
-    margin-top: 10px;
-    opacity: 1;
-    visibility: visible;
-    transition: all .5s;
-  }
 }
+
+// .menu-item:nth-of-type(4) .sub-menu {
+//   width: 100vw;
+//   // max-width: 1440px;
+//   margin: 30px auto;
+//   padding: 24px 9.5vh;
+//   background-color: $white;
+//   border-top: 1px solid $purple03;
+//   box-shadow: 
+//     0px 4px 8px 0px rgba(74, 82, 111, 0.06), 
+//     0px 0px 4px 0px rgba(74, 82, 111, 0.04);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   position: absolute;
+//   left: 0;
+//   opacity: 0;
+//   visibility: hidden;
+//   & > .menu-item a {
+//     padding: 4px 0;
+//     border-bottom: 1px solid transparent;
+//     @include font(16px, 400, 150%);
+//     text-transform: none;
+//     color: $purple06;
+//     display: flex;
+//     align-items: center;
+//     column-gap: 8px;
+//     @include screen-1280 {
+//       font-size: 14px;
+//     }
+//     &:hover {
+//       color: $purple06;
+//       border-color: $purple06;
+//     } 
+//   }
+//   .menu-item a::before {
+//     // content: url('../images/sprite.svg#map-pin');
+//     // content: url('../images/map-pin.svg');
+//     content: '';
+//     width: 18px;
+//     height: 18px;
+//     // background-image: url('../images/sprite.svg#map-pin');
+//     background-image: url('../images/map-pin.svg');
+//   }
+//   .menu-item:nth-child(1) a::before {
+//     background-image: url('../images/map.svg');
+//   }
+//   & > .current_page_item {
+//     color: $purple06;
+//     border-color: $purple06;
+//   }
+// }
+
+.menu-item:hover > .sub-menu {
+  margin-top: 0px;
+  opacity: 1;
+  visibility: visible;
+  transition: all $time_show_menu;
+}
+
+// .submenu {
+//   &__content {
+//     height: 132px;
+//     flex-wrap: wrap;
+//     gap: 16px 12vh;
+//     @include screen-1280 {
+//       padding: 24px 4vh;
+//     }
+//     @include screen-1280 {
+//       padding: 24px 3vh;
+//     }
+//   }
+//   &__list2 {
+//   & li:nth-child(1) {
+//     height: 64px;
+//   }
 
 // ---------- Language ----------
 
@@ -276,28 +306,28 @@
 
 .mobile-menu {
   display: none;
-  @include screen-1024 {
-    display: inline-block;
-  }
-  .sprite {
-    width: 24px;
-    height: 24px;
-    stroke: $purple06;
-  }
-  &:hover {
-    .sprite {
-      stroke: $purple04;
-    }
-  }
-  // &:active {
-  //   sprite {
-  //     stroke: $purple06;
-  //   }
-  // }
-  // &:disabled {
-  //   opacity: 0.5;
-  //   .svg-sprite {
-  //     stroke: $purple09;
-  //   }
-  // }
+//   @include screen-1024 {
+//     display: inline-block;
+//   }
+//   .sprite {
+//     width: 24px;
+//     height: 24px;
+//     stroke: $purple06;
+//   }
+//   &:hover {
+//     .sprite {
+//       stroke: $purple04;
+//     }
+//   }
+//   // &:active {
+//   //   sprite {
+//   //     stroke: $purple06;
+//   //   }
+//   // }
+//   // &:disabled {
+//   //   opacity: 0.5;
+//   //   .svg-sprite {
+//   //     stroke: $purple09;
+//   //   }
+//   // }
 }

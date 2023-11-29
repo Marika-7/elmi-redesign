@@ -1,94 +1,64 @@
 header.header
   //- a(href='test.html') Test
-  .header__content
-    a.logo(href="index.html")
-      img.logo__img(src="./images/logo.png" alt="Logo")
+  .content
+    .logo
+      a.logo__link(href="index.html")
+        img.logo__img(src="./images/logo.png" alt="Logo")
       p.logo__text Центр создания семьи
 
-    nav.nav
-      a.nav__link.nav__active(href='index.html') Главная
-      a.nav__link(href='#') О нас
-      .submenu
-        span.nav__link Знакомства для брака
+    .header__right
+      ul.nav
+        li.menu-item.current_page_item
+          a(href="index.html") Главная
+        li.menu-item
+          a(href="#") О нас
+        li.menu-item.menu-item-has-children
+          a(href="#") Знакомства для брака
+          ul.sub-menu
+            li.menu-item
+              a(href="#") Знакомства для серьезных отношений
+            li.menu-item
+              a(href="#") Знакомства 20-30
+            li.menu-item
+              a(href="#") Знакомства за 30
+            li.menu-item
+              a(href="#") Знакомства за 40
+            li.menu-item
+              a(href="#") Знакомства за 50
+            li.menu-item
+              a(href="#") Знакомства за 60+
+            li.menu-item
+              a(href="#") Брачное агентство в Израиле
+        li.menu-item.menu-item-has-children
+          a(href="#") Знакомства в Израиле
+          ul.sub-menu
+            li.menu-item
+              a(href="#") Знакомства в Израиле на русском языке
+            li.menu-item
+              a(href="#") Знакомства в Хайфе
+            li.menu-item
+              a(href="#") Знакомства в Тель-Авиве
+            li.menu-item
+              a(href="#") Знакомства в Нетании
+            li.menu-item
+              a(href="#") Знакомства в Ашдоде
+        li.menu-item
+          a(href="#") Блог
+        li.menu-item
+          a(href="#") Отзывы
+        li.menu-item
+          a(href="#") Контакты
+
+      .lang
+        button.lang__btn_small(id="lang-header")
           svg.sprite
-            use(href="./images/sprite.svg#down")
-        ul.submenu__list1
-          li
-            a.submenu__link Знакомства для серьезных отношений
-          li
-            a.submenu__link.submenu__active Знакомства 20-30
-          li
-            a.submenu__link Знакомства за 30
-          li
-            a.submenu__link Знакомства за 40
-          li
-            a.submenu__link Знакомства за 50
-          li
-            a.submenu__link Знакомства за 60+
-          li
-            a.submenu__link Брачное агентство в Израиле
+            use(href="./images/sprite.svg#earth")
+        ul.lang__menu1.menu_hide(id="lang-header-menu")
+          li.lang__item1.lang__active1 Русский
+          li.lang__item1 עברית 
 
-      .submenu
-        span.nav__link Знакомства в Израиле
-          svg.sprite
-            use(href="./images/sprite.svg#down")
-        ul.submenu__list2
-          .submenu__content
-            li
-              a.submenu__link 
-                svg.sprite 
-                  use(href="./images/sprite.svg#map")
-                span Знакомства в Израиле на русском языке
-            li
-              a.submenu__link 
-                svg.sprite 
-                  use(href="./images/sprite.svg#map-pin")
-                span Знакомства в Хайфе
-            li
-              a.submenu__link 
-                svg.sprite 
-                  use(href="./images/sprite.svg#map-pin")
-                span Знакомства в Тель-Авиве
-            li
-              a.submenu__link 
-                svg.sprite 
-                  use(href="./images/sprite.svg#map-pin")
-                span Знакомства в Нетании
-            li
-              a.submenu__link 
-                svg.sprite 
-                  use(href="./images/sprite.svg#map-pin")
-                span Знакомства в Ашдоде
+      button.btn-secondary(id="application") Оставить заявку
 
-      //- .submenu
-      //-   span.nav__link Знакомства в Израиле
-      //-     svg.sprite
-      //-       use(href="./images/sprite.svg#down")
-      //-   ul.submenu__list1
-      //-     li
-      //-       a.submenu__link Знакомства в Израиле на русском языке
-      //-     li
-      //-       a.submenu__link Знакомства в Хайфе
-      //-     li
-      //-       a.submenu__link Знакомства в Тель-Авиве
-      //-     li
-      //-       a.submenu__link Знакомства в Нетании
-      //-     li
-      //-       a.submenu__link Знакомства в Ашдоде
-      a.nav__link(href='#') Блог
-      a.nav__link(href='#') Отзывы
-      a.nav__link(href='#') Контакты
-
-    .lang
-      button.lang__btn_small(id="lang-header")
-        svg.sprite
-          use(href="./images/sprite.svg#earth")
-      ul.lang__menu1.menu_hide(id="lang-header-menu")
-        li.lang__item1.lang__active1 Русский
-        li.lang__item1 עברית 
-
-    button.btn-secondary(id="application") Оставить заявку
-
-    button.mobile-menu
-      svg.sprite 
-        use(href="./images/sprite.svg#menu")
+      button.mobile-menu
+        svg.sprite 
+          use(href="./images/sprite.svg#menu")

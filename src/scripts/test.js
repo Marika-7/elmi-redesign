@@ -1,57 +1,35 @@
 // console.log('Test - test.js');
 
 // ---------- nav - set active link -----------
+// for test; delete for wordpress
 
-const navLinks = document.querySelectorAll('.nav__link');
+const navLinks = document.querySelectorAll('.menu-item');
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].onclick = setActiveLink;
 }
 
 function setActiveLink(event) {
   for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.remove('nav__active');
-  }
-  for (let i = 0; i < submenu.length; i++) {
-    submenu[i].classList.remove('submenu__active');
+    navLinks[i].classList.remove('current_page_item');
   }
   let elem = event.target;
-  while(!elem.classList.contains('nav__link')) {
+  while(!elem.classList.contains('menu-item')) {
     elem = elem.parentNode;
   }
-  elem.classList.add('nav__active');
-}
-
-// ---------- nav - set active submenu link  -----------
-
-const submenu = document.querySelectorAll('.submenu__link');
-for (let i = 0; i < submenu.length; i++) {
-  submenu[i].onclick = setActiveSubmenuLink;
-}
-
-function setActiveSubmenuLink(event) {
-  for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.remove('nav__active');
-  }
-  for (let i = 0; i < submenu.length; i++) {
-    submenu[i].classList.remove('submenu__active');
-  }
-  let elem = event.target;
-  while(!elem.classList.contains('submenu__link')) {
-    elem = elem.parentNode;
-  }
-  elem.classList.add('submenu__active');
-  elem.parentNode.parentNode.previousElementSibling.classList.add('nav__active');
+  elem.classList.add('current_page_item');
 }
 
 // ---------- open language menu -----------
 
 document.getElementById('lang-header').onclick = () => toggleMenu('lang-header-menu');
+document.getElementById('lang-header').onblur = () => toggleMenu('lang-header-menu');
 
 document.getElementById('lang-footer').onclick = () => toggleMenu('lang-footer-menu');
+document.getElementById('lang-footer').onblur = () => toggleMenu('lang-footer-menu');
 
-document.getElementById('lang-header-menu').onclick = () => toggleMenu('lang-header-menu');
+// document.getElementById('lang-header-menu').onclick = () => toggleMenu('lang-header-menu');
 
-document.getElementById('lang-footer-menu').onclick = () => toggleMenu('lang-footer-menu');
+// document.getElementById('lang-footer-menu').onclick = () => toggleMenu('lang-footer-menu');
 
 // function openMenu(name) {
   // const menu = document.getElementById(name);
@@ -79,7 +57,15 @@ document.getElementById('application').onclick = () => {
 
 // ---------- check input -----------
 
-document.getElementById('name').onblur = (event) => {
+let form_footer = document.forms.footer;
+
+for(let i=0; i<form_footer.length; i++) {
+  if(form_footer[i].name !== 'phone') {
+    form_footer[i].onblur = checkInput;
+  }
+}
+
+function checkInput(event) {
   if(event.target.value) {
     event.target.classList.add('input_success');
     event.target.classList.remove('input_error');

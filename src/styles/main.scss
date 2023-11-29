@@ -10,15 +10,31 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: $white;
+  background-color: $purple02;
   color: $black;
 }
 
 .main {
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 706px);
   padding-top: 88px;
-  background-color: $purple02;
+  @include screen-1024 {
+    padding-top: 56px;
+  }
 }
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+  @include screen-1440 {
+    padding: 0 6vw;
+  }
+  @include screen-1340 {
+    padding: 0 3vw;
+  }
+}
+
  h1 {
   margin-top: 20px;
   text-align: center;
@@ -39,8 +55,8 @@ body {
 .sprite {
   width: 18px;
   height: 18px;
-  fill: $purple06;
-  stroke: $purple09;
+  // fill: $purple06;
+  // stroke: $purple09;
   transition: inherit;
 }
 
@@ -62,3 +78,5 @@ body {
 //     background-position: 90% 100%, center center;
 //   }
 // }
+
+

@@ -66,6 +66,8 @@ function sprite() {
     .pipe(svgSprite({
       // dest: 'docs/images',
       mode: {
+
+        // css: true,
         symbol: true,
         // sprite: 'icons-sprite.svg'
       }

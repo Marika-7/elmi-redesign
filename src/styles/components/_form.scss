@@ -26,15 +26,18 @@
 
 .label {
   width: 100%;
-  min-height: 74px;
+  // min-height: 74px;
   @include font(14px, normal, 150%);
   &:has(:disabled) {
     opacity: 0.5;
   }
+  .error {
+    min-height: 23px;
+  }
   .text-error {
     display: none;
   }
-  &:has(.input_error)>.text-error {
+  &:has(.input_error) .text-error {
     display: inline;
   }
 }
