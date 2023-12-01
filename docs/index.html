@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
     <style>svg{width: 18px;height: 18px;}</style>
   </head>
@@ -66,68 +66,187 @@
         </div>
       </div>
     </header>
-    <main class="main">
-      <h1>Home page</h1>
-    </main>
-    <footer class="footer"> 
-      <div class="content">
-        <div class="footer__top">
-          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
-            <p class="logo__text">Центр создания семьи</p>
+    <div class="container">
+      <main class="main home-main">
+        <section class="home-banner">
+          <div class="title">
+            <h1>ЕЛЕНА МИНАКОВА</h1>
+            <p>Эксклюзивное сопровождение для мужчин и женщин в поиске своего партнера в Израиле </p>
+            <button class="btn-main">ХОЧУ</button>
           </div>
-          <div class="footer__center">
-            <div class="footer__contact">
-              <h2 class="footer__title">Контакты</h2>
-              <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
-              <p class="footer__text">054 760 79 40</p>
-              <p class="footer__text">elmi4u@gmail.com</p>
-            </div>
-            <div class="footer__contact">
-              <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
-            </div>
+          <div class="circle">
+            <p class="circle__name">Elmi</p>
+            <p class="circle__descr">Для серьезных отношений и создания семьи</p>
           </div>
-          <form class="footer__form" name="footer">
-            <h2 class="footer__title">Задать вопрос</h2>
-            <div class="block">
-              <label class="label">
-                <input class="input" name="name" required placeholder="Имя*">
-                <div class="error"><span class="text-error">Error</span></div>
-              </label>
-              <label class="label">
-                <input class="input" name="email" required placeholder="Email*">
-                <div class="error"><span class="text-error">Error</span></div>
-              </label>
-              <label class="label">
-                <input class="input" name="phone" placeholder="Телефон">
-                <div class="error"><span class="text-error">Error</span></div>
-              </label>
-              <label class="label">
-                <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
-                <div class="error"><span class="text-error">Error</span></div>
-              </label>
-            </div>
-            <button class="btn-secondary">Отправить</button>
-          </form>
-        </div>
-        <div class="footer__bottom">
-          <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
-          <div class="lang">
-            <button class="lang__btn_large" id="lang-footer">
-              <svg class="sprite">
-                <use href="./images/sprite.svg#earth"></use>
-              </svg><span>Русский</span>
-              <svg class="sprite">
-                <use href="./images/sprite.svg#chevron-down"></use>
-              </svg>
-            </button>
-            <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
-              <li class="lang__item2">עברית</li>
-              <li class="lang__item2 lang__active2">Русский</li>
+          <div class="svaha">Профессиональная сваха</div>
+        </section>
+        <div class="home-sections">
+          <section class="home-about home-widht1">
+            <h2 class="title2"><span class="text-red">Знакомства в Израиле </span><span>- Центр создания семьи Elmi</span></h2>
+            <p>Выбирай из лучших!</p>
+            <p>Благодаря связям и опыту свахи, у тебя есть доступ к выдающимся кандидатам. Для того чтобы твоя история любви началась с правильного человека.</p>
+            <ul>Знакомься с надежными партнерами, готовыми к серьезным отношениям:
+              <li>Без траты времени на бесконечные поиски на сайтах знакомств, приложениях и соцсетях</li>
+              <li>Без потребности разгадывать человека на предмет его серьезности</li>
+              <li>С уверенностью, что сваха сопровождает и дает индивидуальные советы на всех этапах знакомства</li>
             </ul>
+          </section>
+          <section class="home-video home-widht1">
+            <h2 class="title2">Узнайте из видео</h2>
+            <p class="text-normal-strong">Какие самые частые ошибки, люди делают во время знакомств и как произвести впечатления и правильно подготовится к первому свиданию</p>
+            <div class="video"><img src="./images/video.webp"></div>
+          </section>
+          <section class="home-whom home-widht2">
+            <div class="home-widht1">
+              <h2 class="title2"><span class="text-red">Кому </span><span>подойдет сваха?</span></h2>
+              <p class="text-normal-strong">За 20 лет работы я поняла, что не могу помочь всем. Как Вы выбираете меня, так и я оставляю своими клиентами, тех кому могу помочь и это происходит после первой консультации.</p>
+            </div>
+            <ul> 
+              <li> 
+                <div class="icon-circle"></div><span>Одинокие люди, которые разочаровались от встреч через сайты знакомств и приложений</span>
+              </li>
+              <li> 
+                <div class="icon-circle"></div><span>Люди у которых нет времени на “пустые” встречи</span>
+              </li>
+              <li> 
+                <div class="icon-circle"></div><span>Профессионалы которые, привыкли доверять профессионалам</span>
+              </li>
+            </ul>
+          </section>
+          <section class="home-how home-widht2">
+            <h2 class="title2"><span class="text-red">Как происходит </span><span>весь процесс нашего сотрудничества?</span></h2>
+            <div class="how__wrapper">
+              <div class="how__steps"><span>01
+                  <div class="line"></div></span><span>02</span><span>03</span></div>
+              <div class="how__block">
+                <h3 class="title3">Заявка</h3>
+                <p>Когда я получаю вашу заявку на мои услуги, я или мой менеджер связываемся с вами по контактным данным, которые вы оставили. Затем мы обсуждаем детали и отвечаем на все оставшиеся вопросы. </p>
+                <p>После этого мы договариваемся о личной встрече-консультации. Вы заполняете предварительную анкету и приходите на консультацию в назначенное время</p>
+              </div>
+              <div class="how__block">
+                <h3 class="title3">Консультация</h3>
+                <p>На консультации мы знакомимся. Я узнаю подробнее, кого вы хотите встретить и какие у вас предпочтения. Если мы готовы продолжать сотрудничество, я вношу вас в свою базу данных. </p>
+                <p>Я также рассказываю вам о перспективах участия в клубе знакомств и о своем сопровождении в процессе вашего поиска спутника жизни.</p>
+              </div>
+              <div class="how__block how__block_small">
+                <h3 class="title3">Участие в клубе</h3>
+                <p>Это годовое сопровождения и помощь на всех этапах от встречи до создания полноценных долгосрочных отношений.</p>
+                <p>Подробнее о клубе читайте ниже.</p>
+              </div>
+            </div>
+          </section>
+          <section class="home-what">
+            <div class="what__first home-widht1">
+              <h2 class="title2"><span class="text-red">Что происходит </span><span>на первой консультации</span></h2>
+              <div class="meet"><img src="./images/clock_calendar.webp" alt="Первая встреча">
+                <div class="meet__text">
+                  <p class="text-normal-strong">Личная встреча онлайн или офисе Центра создания семьи ELMI</p>
+                  <p class="text-small">Длительность: ~ 60 мин</p>
+                </div>
+              </div>
+              <div class="result"> 
+                <h3 class="title3">Результат консультации:</h3>
+                <ul>
+                  <li class="icon-circle-small">Более ясное представление о своих критериях поиска партнера</li>
+                  <li class="icon-circle-small">Понимание своих сильных и слабых сторон в поиске и в дальнейших отношениях</li>
+                  <li class="icon-circle-small">Помощь, подсказки и советы в понимание вероятных ошибок, которые Вы совершаете при поиске, выборе и общении с партнером</li>
+                  <li class="icon-circle-small">Конкретный план действий и инструменты для достижения поставленных целей вместе с клубом знакомств Elmi</li>
+                </ul>
+              </div>
+            </div>
+            <div class="what__second"> 
+              <div class="what__div">
+                <div class="value home-widht1"> 
+                  <h3 class="title3">В чем ценность первой Консультации?</h3>
+                  <p>Происходит знакомство и доверительная беседа. Прояснение Ваших ожиданий, дополнение анкеты с учетом более детальной информации, рассмотрение потенциальных вариантов для знакомства.</p>
+                  <p>Одним словом, с этого и начинается весь процесс нашего сотрудничества</p>
+                </div>
+              </div>
+              <div class="picture"><img src="./images/home_what_img.webp"></div>
+            </div>
+          </section>
+          <section class="home-faq">
+            <h2 class="title2"><span class="text-red"> </span><span> </span></h2>
+            <p> </p>
+          </section>
+          <section class="home-cta">
+            <h2 class="title2"><span class="text-red"> </span><span> </span></h2>
+            <p> </p>
+          </section>
+          <section class="home-trust">
+            <h2 class="title2"><span class="text-red">Почему </span><span>нам стоит доверять?</span></h2>
+            <p> </p>
+          </section>
+          <section class="home-story">
+            <h2 class="title2">Истории любви</h2>
+            <p> </p>
+          </section>
+          <section class="home-price">
+            <h2 class="title2"><span class="text-red">Стоимость </span><span>услуг</span></h2>
+            <p> </p>
+          </section>
+        </div>
+      </main>
+      <footer class="footer"> 
+        <div class="content">
+          <div class="footer__top">
+            <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
+              <p class="logo__text">Центр создания семьи</p>
+            </div>
+            <div class="footer__center">
+              <div class="footer__contact">
+                <h2 class="footer__title">Контакты</h2>
+                <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
+                <p class="footer__text">054 760 79 40</p>
+                <p class="footer__text">elmi4u@gmail.com</p>
+              </div>
+              <div class="footer__contact">
+                <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
+              </div>
+            </div>
+            <form class="footer__form" name="footer">
+              <h2 class="footer__title">Задать вопрос</h2>
+              <div class="block">
+                <label class="label">
+                  <input class="input" name="name" required placeholder="Имя*">
+                  <div class="error"><span class="text-error">Error</span></div>
+                </label>
+                <label class="label">
+                  <input class="input" name="email" required placeholder="Email*">
+                  <div class="error"><span class="text-error">Error</span></div>
+                </label>
+                <label class="label">
+                  <input class="input" name="phone" placeholder="Телефон">
+                  <div class="error"><span class="text-error">Error</span></div>
+                </label>
+                <label class="label">
+                  <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
+                  <div class="error"><span class="text-error">Error</span></div>
+                </label>
+              </div>
+              <button class="btn-secondary">Отправить</button>
+            </form>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
+            <div class="lang">
+              <button class="lang__btn_large" id="lang-footer">
+                <svg class="sprite">
+                  <use href="./images/sprite.svg#earth"></use>
+                </svg><span>Русский</span>
+                <svg class="sprite">
+                  <use href="./images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+              <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
+                <li class="lang__item2">עברית</li>
+                <li class="lang__item2 lang__active2">Русский</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

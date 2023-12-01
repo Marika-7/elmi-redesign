@@ -1,3 +1,12 @@
+-------------------- Elmi --------------------
+
+  https://elmi4u.com/
+  логин
+  Elmi
+  Пароль от админа 
+  elmi201920
+  https://elmi4u.com/elmi4u-login/
+
 -------------------- questions to Daniil --------------------
 
   footer form
@@ -5,11 +14,11 @@
 
 -------------------- questions to Inesa --------------------
 
-  header
-    fixed?
-  nav
-    is submenu float?
-
+  home-section1-bg
+    які там градієнти
+    в якому порядку йдуть слої
+    svaha - what is this
+  
   text button
     які варіанти для desktop,які для mobile?
   images
@@ -28,14 +37,31 @@
     nav
       submenu 1
       submenu 2
-        додати іконки
-        поправити translate
+        add icons inline to html
     lang
     button
-
+    mobile menu
   footer
     incert social links
+    add adaptive
   home
+    banner
+    about
+      add icons
+    video
+    whom
+      add icons
+      вирівняти тексти по вертикалі по центру
+    how
+      add icons
+    what
+      add icons
+      li - edit styles
+    faq
+    cta
+    trust
+    story
+    price
 
   --------------------
 
@@ -90,6 +116,7 @@
   git commit -m "global styles, buttons, inputs"
   git commit -m "header"
   git commit -m "edit header; footer"
+  git commit -m "homem, part 1"
 
 -------------------- npm --------------------
 

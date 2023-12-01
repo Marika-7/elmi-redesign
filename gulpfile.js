@@ -64,12 +64,13 @@ function watching() {
 function sprite() {
   return src('src/images/icons/*.svg')
     .pipe(svgSprite({
-      // dest: 'docs/images',
+      // shape: {
+      //   dimension: {
+      //     precision: 2,
+      //   },
+      // },
       mode: {
-
-        // css: true,
         symbol: true,
-        // sprite: 'icons-sprite.svg'
       }
     }))
     .pipe(dest('src/images/icons'));

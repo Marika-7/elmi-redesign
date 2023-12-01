@@ -1,18 +1,24 @@
 // .title0 {
 //   @include font(64px, bold, 120%);
+//   @include font(88px, 800, 108%);
 // }
 
 // .title1 {
 //   @include font(54px, bold, 120%);
 // }
 
-// .title2 {
+.title2 {
 //   @include font(40px, bold, 120%);
-// }
+  @include font(46px, bold, normal);
+  text-transform: uppercase;
+  text-align: center;
+}
 
-// .title3 {
-//   @include font(26px, bold, 120%);
-// }
+.title3 {
+  // @include font(26px, bold, 120%);
+  @include font(30px, bold, normal);
+  text-align: center;
+}
 
 // .title4 {
 //   @include font(20px, bold, 120%);
@@ -38,13 +44,23 @@
 //   @include font(18px, 500, 150%);
 // }
 
-// .text-normal {
-//   @include font(16px, 500, 150%);
-// }
+.text-normal {
+  @include font(20px, 500, 150%);
+  // @include font(16px, 500, 150%);
+}
 
-// .text-small {
-//   @include font(14px, 400, 150%);
-// }
+.text-normal-strong {
+  @include font(20px, 600, 150%);
+}
+
+.text-small {
+  @include font(18px, 400, 150%);
+  // @include font(14px, 400, 150%);
+}
+
+.text-red {
+  color: $red;
+}
 
 .text-error {
   color: $red-error;

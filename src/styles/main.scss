@@ -1,82 +1,15 @@
 @import 'base/reset';
 @import 'base/variables';
 @import 'base/mixins';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/test';
+@import 'base/base';
+
+@import 'components/test';  // delete
 @import 'components/text';
 @import 'components/buttons';
 @import 'components/form';
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: $purple02;
-  color: $black;
-}
+@import 'components/header';
+@import 'components/footer';
 
-.main {
-  min-height: calc(100vh - 706px);
-  padding-top: 88px;
-  @include screen-1024 {
-    padding-top: 56px;
-  }
-}
-
-.content {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 100px;
-  @include screen-1440 {
-    padding: 0 6vw;
-  }
-  @include screen-1340 {
-    padding: 0 3vw;
-  }
-}
-
- h1 {
-  margin-top: 20px;
-  text-align: center;
- }
-
-.menu {
-  &_hide {
-    opacity: 0;
-    visibility: hidden;
-  }
-  &_open {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-// ---------- svg-sprites -----------
-.sprite {
-  width: 18px;
-  height: 18px;
-  // fill: $purple06;
-  // stroke: $purple09;
-  transition: inherit;
-}
-
-// ---------- home -----------
-
-// .section1 {
-//   width: 100%;
-//   height: 760px;
-//   background-color: lightslategray;
-//   background-image: 
-//     url('../images/photo_home.png'), 
-//     url('../images/background_main.svg');
-//   background-repeat: no-repeat;
-//   background-size: contain, 100% 100%;
-//   background-position: 90% 100%, 0% 0%;
-//   @include screen-1440 {
-//     background-color: violet;
-//     background-size: contain, auto;
-//     background-position: 90% 100%, center center;
-//   }
-// }
-
+@import 'pages/index';
 
