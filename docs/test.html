@@ -58,43 +58,54 @@
             </ul>
           </div>
           <button class="btn-secondary" id="application">Оставить заявку</button>
-          <button class="mobile-menu">
-            <svg class="sprite"> 
-              <use href="./images/sprite.svg#menu"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </header>
-    <div class="container">
-      <main class="main">
-        <h1>Test page</h1>
-        <div class="test-btn">
-          <button class="btn-main">Записаться на консультацию</button>
-          <button class="btn-main" disabled>Записаться на консультацию</button>
-          <button class="btn-secondary">Оставить заявку</button>
-          <button class="btn-secondary" disabled>Оставить заявку</button>
-          <button class="btn-text">Подробнее
-            <svg class="sprite">
-              <use href="./images/sprite.svg#right"></use>
-            </svg>
-          </button>
-          <button class="btn-text btn-text_arrow" disabled>Подробнее
-            <svg class="sprite">
-              <use href="./images/sprite.svg#right"></use>
-            </svg>
-          </button>
-          <button class="btn-text">Подробнее</button>
-          <button class="btn-text" disabled>Подробнее</button>
-          <div class="lang">
-            <button class="lang__btn_small" disabled>
-              <svg class="sprite">
-                <use href="./images/sprite.svg#earth"></use>
-              </svg>
-            </button>
+    <main class="main">
+      <div class="main__test">
+        <h1 class="title2">Test page</h1>
+      </div>
+    </main>
+    <footer class="footer"> 
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
+            <p class="logo__text">Центр создания семьи</p>
           </div>
+          <div class="footer__center">
+            <div class="footer__contact">
+              <h2 class="footer__title">Контакты</h2>
+              <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
+              <p class="footer__text">054 760 79 40</p>
+              <p class="footer__text">elmi4u@gmail.com</p>
+            </div>
+            <div class="footer__contact">
+              <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
+            </div>
+          </div>
+          <form class="footer__form" name="footer">
+            <h2 class="footer__title">Задать вопрос</h2>
+            <div class="block">
+              <label class="label">
+                <input class="input" name="name" required placeholder="Имя*">
+              </label>
+              <label class="label">
+                <input class="input" name="email" required placeholder="Email*">
+              </label>
+              <label class="label">
+                <input class="input" name="phone" placeholder="Телефон">
+              </label>
+              <label class="label">
+                <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
+              </label>
+            </div>
+            <input class="btn-secondary" type="submit" value="Отправить">
+          </form>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
           <div class="lang">
-            <button class="lang__btn_large" disabled>
+            <button class="lang__btn_large" id="lang-footer">
               <svg class="sprite">
                 <use href="./images/sprite.svg#earth"></use>
               </svg><span>Русский</span>
@@ -102,75 +113,14 @@
                 <use href="./images/sprite.svg#down"></use>
               </svg>
             </button>
-          </div>
-          <label class="label">
-            <input class="input" id="name" placeholder="Имя*"><span class="text-error">Error</span>
-          </label>
-          <label class="label">
-            <input class="input" disabled><span class="text-error">Error</span>
-          </label>
-        </div>
-      </main>
-      <footer class="footer"> 
-        <div class="content">
-          <div class="footer__top">
-            <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
-              <p class="logo__text">Центр создания семьи</p>
-            </div>
-            <div class="footer__center">
-              <div class="footer__contact">
-                <h2 class="footer__title">Контакты</h2>
-                <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
-                <p class="footer__text">054 760 79 40</p>
-                <p class="footer__text">elmi4u@gmail.com</p>
-              </div>
-              <div class="footer__contact">
-                <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
-              </div>
-            </div>
-            <form class="footer__form" name="footer">
-              <h2 class="footer__title">Задать вопрос</h2>
-              <div class="block">
-                <label class="label">
-                  <input class="input" name="name" required placeholder="Имя*">
-                  <div class="error"><span class="text-error">Error</span></div>
-                </label>
-                <label class="label">
-                  <input class="input" name="email" required placeholder="Email*">
-                  <div class="error"><span class="text-error">Error</span></div>
-                </label>
-                <label class="label">
-                  <input class="input" name="phone" placeholder="Телефон">
-                  <div class="error"><span class="text-error">Error</span></div>
-                </label>
-                <label class="label">
-                  <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
-                  <div class="error"><span class="text-error">Error</span></div>
-                </label>
-              </div>
-              <button class="btn-secondary">Отправить</button>
-            </form>
-          </div>
-          <div class="footer__bottom">
-            <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
-            <div class="lang">
-              <button class="lang__btn_large" id="lang-footer">
-                <svg class="sprite">
-                  <use href="./images/sprite.svg#earth"></use>
-                </svg><span>Русский</span>
-                <svg class="sprite">
-                  <use href="./images/sprite.svg#chevron-down"></use>
-                </svg>
-              </button>
-              <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
-                <li class="lang__item2">עברית</li>
-                <li class="lang__item2 lang__active2">Русский</li>
-              </ul>
-            </div>
+            <ul class="lang__menu2 menu_hide" id="lang-footer-menu">
+              <li class="lang__item2">עברית</li>
+              <li class="lang__item2 lang__active2">Русский</li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

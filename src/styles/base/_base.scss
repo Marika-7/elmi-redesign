@@ -1,3 +1,30 @@
+// ---------- scrollbar -----------
+
+html:not(.touch-screen)::-webkit-scrollbar,
+html:not(.touch-screen) *::-webkit-scrollbar {
+  width: 8px;
+  // height: 6px;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-track,
+html:not(.touch-screen) *::-webkit-scrollbar-track {
+  background: $purple02;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-thumb,
+html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+  background: $purple09;
+  border: 1px solid $purple02;
+  border-radius: 20px; 
+}
+
+// body {
+//   scrollbar-width: thin;
+//   scrollbar-color: $purple09 $purple02;
+// }
+
+// ---------- body -----------
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $purple02;
@@ -5,11 +32,11 @@ body {
   @include font(20px, 500, 150%);
 }
 
-.container {
-  width: 100vw;
-  max-width: 1440px;
-  margin: 0 auto;
-}
+// .container {
+//   width: 100vw;
+//   max-width: 1440px;
+//   margin: 0 auto;
+// }
 
 .main {
   // min-height: calc(100vh - 706px);
@@ -59,40 +86,15 @@ body {
 
 .icon-circle {
   // width: 75.465px;
-  width: 76px;
+  width: 78px;
   height: 78px;
-  // padding: 6.999px 4.465px 7.001px 7px;
-  background: $purple05;
-  border: 7px solid $purple03;
-  border-radius: 50%;
-  display: flex;
-  // flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // flex-shrink: 0;
-}
-
-.icon-circle-small {
-  padding: 8px 0;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  gap: 12px;
-  &::before {
-    content: '';
-    // display: inline-block;
-    width: 32px;
-    height: 32px;
-    // padding: 2.875px 2.872px 2.869px 2.872px;
-    background-color: $purple05_transparent;
-    background-image: url('../images/check.svg');
-    background-position: center center;
-    // border: 3px solid $purple05_transparent;
-    border-radius: 50%;
-    flex-shrink: 0;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-  }
+  // // padding: 6.999px 4.465px 7.001px 7px;
+  // background: $purple05;
+  // border: 7px solid $purple03;
+  // border-radius: 50%;
+  // display: flex;
+  // // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // // flex-shrink: 0;
 }

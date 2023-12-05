@@ -71,6 +71,7 @@ function sprite() {
       // },
       mode: {
         symbol: true,
+        // view: true,
       }
     }))
     .pipe(dest('src/images/icons'));

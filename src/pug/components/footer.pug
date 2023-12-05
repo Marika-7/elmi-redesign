@@ -20,21 +20,21 @@ footer.footer
         .block
           label.label
             input.input(name="name" required placeholder='Имя*')
-            .error
-              span.text-error Error
+            //- .error
+            //-   span.text-error Error
           label.label
             input.input(name="email" required placeholder='Email*')
-            .error
-              span.text-error Error
+            //- .error
+            //-   span.text-error Error
           label.label
             input.input(name="phone" placeholder='Телефон')
-            .error
-              span.text-error Error
+            //- .error
+            //-   span.text-error Error
           label.label
             textarea.input(name="question" required placeholder='Ваш вопрос...')
-            .error
-              span.text-error Error
-        button.btn-secondary Отправить
+            //- .error
+            //-   span.text-error Error
+        input.btn-secondary(type="submit" value="Отправить") 
     .footer__bottom
       p.footer__signature elmi4u.com 2012-2023 © Все права защищены
       a.footer__signature(href="#") Политика конфиденциальности
@@ -44,7 +44,7 @@ footer.footer
             use(href="./images/sprite.svg#earth")
           span Русский
           svg.sprite
-            use(href="./images/sprite.svg#chevron-down")
+            use(href="./images/sprite.svg#down")
         ul.lang__menu2.menu_hide(id="lang-footer-menu")
           li.lang__item2 עברית
           li.lang__item2.lang__active2 Русский

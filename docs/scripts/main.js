@@ -83,3 +83,14 @@ function checkInput(event) {
     event.target.classList.remove('input_success');
   }
 }
+
+// ---------- close detailes -----------
+
+document.body.onclick = function (event) {
+  document.body.querySelectorAll('details[open]').forEach(function (elem) {
+    if (elem === event.target.parentNode) {
+      return;
+    }
+    elem.open = false;
+  });
+};

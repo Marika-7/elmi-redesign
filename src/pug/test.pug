@@ -2,36 +2,47 @@ extends components/layout
 
 block content
   main.main
-    h1 Test page
+    .main__test
+      h1.title2 Test page
+      //- .test-grid
+      //-   .item 
+      //-     .img Image
+      //-     .title Title 
+      //-     .text Text
+      //-   .item 2
+      //-   .item 3
+      //-   .item 4
+      //-   .item 5
+      //-   .item 6
 
     //- section.section1 
-    div.test-btn
-      button.btn-main Записаться на консультацию
-      button.btn-main(disabled) Записаться на консультацию
-      button.btn-secondary Оставить заявку
-      button.btn-secondary(disabled) Оставить заявку
-      button.btn-text Подробнее
-        svg.sprite
-          use(href="./images/sprite.svg#right")
-      button.btn-text.btn-text_arrow(disabled) Подробнее
-        svg.sprite
-          use(href="./images/sprite.svg#right")
-      button.btn-text Подробнее
-      button.btn-text(disabled) Подробнее
-      .lang
-        button.lang__btn_small(disabled)
-          svg.sprite
-            use(href="./images/sprite.svg#earth")
-      .lang
-        button.lang__btn_large(disabled)
-          svg.sprite
-            use(href="./images/sprite.svg#earth")
-          span Русский
-          svg.sprite
-            use(href="./images/sprite.svg#down")
-      label.label
-        input.input(id="name" placeholder='Имя*')
-        span.text-error Error
-      label.label
-        input.input(disabled)
-        span.text-error Error
+    //- div.test-btn
+    //-   button.btn-main Записаться на консультацию
+    //-   button.btn-main(disabled) Записаться на консультацию
+    //-   button.btn-secondary Оставить заявку
+    //-   button.btn-secondary(disabled) Оставить заявку
+    //-   button.btn-text Подробнее
+    //-     svg.sprite
+    //-       use(href="./images/sprite.svg#right")
+    //-   button.btn-text.btn-text_arrow(disabled) Подробнее
+    //-     svg.sprite
+    //-       use(href="./images/sprite.svg#right")
+    //-   button.btn-text Подробнее
+    //-   button.btn-text(disabled) Подробнее
+    //-   .lang
+    //-     button.lang__btn_small(disabled)
+    //-       svg.sprite
+    //-         use(href="./images/sprite.svg#earth")
+    //-   .lang
+    //-     button.lang__btn_large(disabled)
+    //-       svg.sprite
+    //-         use(href="./images/sprite.svg#earth")
+    //-       span Русский
+    //-       svg.sprite
+    //-         use(href="./images/sprite.svg#down")
+    //-   label.label
+    //-     input.input(id="name" placeholder='Имя*')
+    //-     span.text-error Error
+    //-   label.label
+    //-     input.input(disabled)
+    //-     span.text-error Error

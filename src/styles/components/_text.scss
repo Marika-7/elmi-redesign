@@ -8,6 +8,7 @@
 // }
 
 .title2 {
+  margin-bottom: 64px;
 //   @include font(40px, bold, 120%);
   @include font(46px, bold, normal);
   text-transform: uppercase;
@@ -49,13 +50,13 @@
   // @include font(16px, 500, 150%);
 }
 
-.text-normal-strong {
-  @include font(20px, 600, 150%);
-}
-
 .text-small {
   @include font(18px, 400, 150%);
   // @include font(14px, 400, 150%);
+}
+
+.strong {
+  font-weight: bold;
 }
 
 .text-red {
