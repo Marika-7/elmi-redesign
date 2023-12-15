@@ -1,0 +1,113 @@
+// .title0 {
+//   margin-bottom: 16px;
+//   @include font(88px, 800, 108%);
+// }
+
+// h1, 
+// .title1 {
+//   margin-bottom: 112px;
+//   @include font(72px, 800, 108%);
+// }
+
+h2, 
+.title2 {
+  margin-bottom: 64px;
+  @include font(46px, 700, 100%);
+  text-transform: uppercase;
+  text-align: center;
+  // @include screen-1024 {
+  //   // margin-bottom: 48px;
+  //   font-size: 40px;
+  // }
+  // @include screen-640 {
+  //   // margin-bottom: 32px;
+  //   font-size: 24px;
+  // }
+  @include screen-480 {
+    // margin-bottom: 32px;
+    font-size: 30px;
+  }
+}
+
+h3, 
+.title3 {
+  margin-bottom: 16px;
+  @include font(30px, 700, 100%);
+  text-align: center;
+  @include screen-1024 {
+    // margin-bottom: 24px;
+    font-size: 24px;
+  }
+  // @include screen-640 {
+  //   // margin-bottom: 18px;
+  //   font-size: 20px;
+  // }
+  // @include screen-480 {
+  //   // margin-bottom: 18px;
+  //   font-size: 24px;
+  // }
+}
+
+h4, 
+.title4 {
+  margin-bottom: 24px;
+  @include font(20px, 700, 150%);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+// h5, .title5 {
+//   @include font(26px, 700, 100%);
+//  text-align: left;
+// }
+
+p, 
+a, 
+li, 
+.text-normal {
+  // margin-bottom: 8px;
+  @include font(20px, 500, 150%);
+  // @include screen-1024 {
+  //   font-size: 12px;
+  // }
+  // @include screen-640 {
+  //   font-size: 16px;
+  // }
+  // @include screen-480 {
+  //   font-size: 16px;
+  // }
+}
+
+.text-small {
+  @include font(18px, 400, 150%);
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-error {
+  color: $red-error;
+}
+
+// ----------
+
+// .title6 {
+//   @include font(12px, bold, 120%);
+// }
+
+// .text-lead {
+//   @include font(24px, 500, 150%);
+// }
+
+// .text-large {
+//   @include font(20px, 500, 120%);
+// }
+
+// .text-medium {
+//   @include font(18px, 500, 150%);
+// }

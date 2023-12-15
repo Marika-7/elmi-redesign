@@ -1,0 +1,158 @@
+.footer {
+  background-color: $purple02;
+  border-top: 1px solid $purple01;
+  .content {
+    padding-top: 48px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+    // @include screen-1024 {}
+    @include screen-480 {
+      padding: 32px 16px;
+    }
+  }
+  &__top {
+    // display: flex;
+    // justify-content: space-between;
+    // gap: 32px;
+    display: grid;
+    grid-template-areas: 
+      "a b c";
+    justify-content: space-between;
+    gap: 32px;
+    @include screen-1280 {
+      grid-template-areas: 
+        "a c"
+        "b c";
+        justify-content: space-evenly;
+    }
+    @include screen-1024 {
+      grid-template-areas: 
+        "a" 
+        "b" 
+        "c";
+        justify-content: center;
+    }
+    &>:nth-child(1) {
+      grid-area: a;
+      @include screen-1024 {
+        justify-self: center;
+      }
+    }
+    &>:nth-child(2) {
+      grid-area: b;
+      justify-self: center;
+    }
+    &>:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  .logo {
+    a {
+      display: inline-block;
+      width: 280px;
+      height: 119px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    p {
+      @include font(19px, 500, 150%);
+      text-transform: uppercase;
+    }
+  }
+  &__center {
+  h4 {
+    margin-top: 40px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  p, 
+  a {
+    margin-bottom: 16px;
+  }
+  a {
+    display: inline-block;
+  }
+  }
+  &__form {
+    width: 387px;
+    padding: 32px;
+    background-image: $form_gradient;
+    border: 1px solid $gray_light_extra;
+    border-radius: 14px;
+    @include screen-480 {
+      width: 100%;
+      padding: 24px 16px;
+    }
+    // h4 {}
+    .input {
+      margin-bottom: 27px;
+    }
+    textarea {
+      margin-bottom: 16px;
+    }
+    .btn-secondary {
+      width: 100%;
+    }
+  }
+  &__bottom {
+    padding: 16px 0;
+    border-top: 1px solid $purple09;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px 20px;
+    align-items: center;
+    @include screen-1024 {
+      grid-template-columns: repeat(1, auto);
+    }
+    &>:nth-child(1n) {
+      @include screen-1024 {
+        justify-self: center;
+      }
+    }
+    // &:nth-child(3) {
+    //   @include screen-1024 {
+    //     grid-column: 1 / -1;
+    //   }
+    // }
+    p, 
+    a {
+      color: $purple06;
+      @include font(18px, 500, 150%);
+    }
+  }
+   
+}
+
+.lang {
+  &__menu2 {
+    width: 138px;
+    padding: 8px 0;
+    background-color: $purple03;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 42px;
+    transition: all $time_show_menu;
+    z-index: 1;
+  }
+  &__item2 {
+    padding: 0 32px;
+    color: $purple06;
+    @include font(16px, 500, 150%);
+    &:hover {
+      background-color: $purple02;
+    }
+  }
+  &__active2 {
+    background-color: $purple02;
+  }
+  &:has(.menu_show) .lang__btn_large .sprite:last-of-type {
+    transform: rotate(180deg);
+  }
+}

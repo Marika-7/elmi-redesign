@@ -1,0 +1,82 @@
+// ---------- test page -----------
+.main__test {
+  padding: 40px;
+}
+
+.test-btn {
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+// .slider__wrapper 
+// .slider 
+// .slider__item
+// .slider__img-block
+// img
+// .slider__text
+// a
+// h3 
+// p 
+// button.btn-text Подробнее
+// svg.sprite
+// use
+
+.slider {
+  &__screen {}
+  // &__item {}
+  // &__item.active {}
+  // &__img-block {}
+  // img {}
+  &__text {
+    // background-color: $white;
+    // padding: 24px;
+  }
+  h3 {
+    // margin-bottom: 8px;
+    // color: $red;
+  }
+  p {
+    @include font (18px, 500, 150%);
+    // margin-bottom: 16px;
+  }
+  // .btn-text {
+  //   .sprite {}
+    // use {}
+  // }
+  &__bottom {
+    // width: 413px;
+    // margin: 40px auto 0;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+  &__arrow {
+    // width: 40px;
+    // height: 40px;
+    .sprite {
+      // width: 40px;
+      // height: 40px;
+    }
+    // use {}
+  }
+  &__points {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 16px;
+  }
+  &__point {
+    // width: 10px;
+    // height: 10px;
+    // background-color: $gray_light;
+    // border-radius: 50%;
+  }
+  &__point.active {
+    // background-color: $red;
+  }
+} 

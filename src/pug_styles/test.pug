@@ -1,0 +1,58 @@
+extends components/layout
+
+block content
+  main.main
+    .main__test
+      //- h1.title2 Test page
+
+      //- section.section1 
+      section.home-story
+        //- .story__title
+          //- h2 Истории любви
+        block slider
+          include components/slider
+        
+    //- div.test-btn
+      //- button.btn-main Записаться на консультацию
+      //- button.btn-main(disabled) Записаться на консультацию
+      //- button.btn-secondary Оставить заявку
+      //- button.btn-secondary(disabled) Оставить заявку
+      //- button.btn-text Подробнее
+      //-   svg.sprite
+      //-     use(href="./images/sprite.svg#right")
+      //- button.btn-text.btn-text_arrow(disabled) Подробнее
+      //-   svg.sprite
+      //-     use(href="./images/sprite.svg#right")
+      //- button.btn-text Подробнее
+      //- button.btn-text(disabled) Подробнее
+
+      //- .lang
+      //-   button.lang__btn_small
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#earth")
+      //- .lang
+      //-   button.lang__btn_large
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#earth")
+      //-     span Русский
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#down")
+      //- .lang
+      //-   button.lang__btn_small(disabled)
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#earth")
+      //- .lang
+      //-   button.lang__btn_large(disabled)
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#earth")
+      //-     span Русский
+      //-     svg.sprite
+      //-       use(href="./images/sprite.svg#down")
+
+      //- input.input(id="name" placeholder='Имя*')
+      //- input.input(disabled)
+
+      //- label.label Title text here
+      //-   input.input(id="name" placeholder='Имя*')
+      //- label.label Title text here
+      //-   input.input(disabled)

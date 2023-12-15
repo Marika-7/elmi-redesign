@@ -9,43 +9,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <style>svg{width: 18px;height: 18px;}</style>
   </head>
   <body>
-    <header class="header">
-      <div class="content">
-        <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
-          <p class="logo__text">Центр создания семьи</p>
+    <header class="header"> 
+      <div class="content"> 
+        <div class="logo"><a href="index.html"><img src="./images/logo.webp" alt="Logo"></a>
+          <p>Центр создания семьи</p>
         </div>
+        <ul class="nav">
+          <li class="menu-item current_page_item"><a href="index.html">Главная</a></li>
+          <li class="menu-item"><a href="#">О нас</a></li>
+          <li class="menu-item menu-item-has-children"><a href="#">Знакомства для брака</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="#">Знакомства для серьезных отношений</a></li>
+              <li class="menu-item"><a href="#">Знакомства 20-30</a></li>
+              <li class="menu-item"><a href="#">Знакомства за 30</a></li>
+              <li class="menu-item"><a href="#">Знакомства за 40</a></li>
+              <li class="menu-item"><a href="#">Знакомства за 50</a></li>
+              <li class="menu-item"><a href="#">Знакомства за 60+</a></li>
+              <li class="menu-item"><a href="#">Брачное агентство в Израиле</a></li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children"><a href="#">Знакомства в Израиле</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="#">Знакомства в Израиле на русском языке</a></li>
+              <li class="menu-item"><a href="#">Знакомства в Хайфе</a></li>
+              <li class="menu-item"><a href="#">Знакомства в Тель-Авиве</a></li>
+              <li class="menu-item"><a href="#">Знакомства в Нетании</a></li>
+              <li class="menu-item"><a href="#">Знакомства в Ашдоде</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#">Блог</a></li>
+          <li class="menu-item"><a href="#">Отзывы</a></li>
+          <li class="menu-item"><a href="#">Контакты</a></li>
+        </ul>
         <div class="header__right">
-          <ul class="nav">
-            <li class="menu-item current_page_item"><a href="index.html">Главная</a></li>
-            <li class="menu-item"><a href="#">О нас</a></li>
-            <li class="menu-item menu-item-has-children"><a href="#">Знакомства для брака</a>
-              <ul class="sub-menu">
-                <li class="menu-item"><a href="#">Знакомства для серьезных отношений</a></li>
-                <li class="menu-item"><a href="#">Знакомства 20-30</a></li>
-                <li class="menu-item"><a href="#">Знакомства за 30</a></li>
-                <li class="menu-item"><a href="#">Знакомства за 40</a></li>
-                <li class="menu-item"><a href="#">Знакомства за 50</a></li>
-                <li class="menu-item"><a href="#">Знакомства за 60+</a></li>
-                <li class="menu-item"><a href="#">Брачное агентство в Израиле</a></li>
-              </ul>
-            </li>
-            <li class="menu-item menu-item-has-children"><a href="#">Знакомства в Израиле</a>
-              <ul class="sub-menu">
-                <li class="menu-item"><a href="#">Знакомства в Израиле на русском языке</a></li>
-                <li class="menu-item"><a href="#">Знакомства в Хайфе</a></li>
-                <li class="menu-item"><a href="#">Знакомства в Тель-Авиве</a></li>
-                <li class="menu-item"><a href="#">Знакомства в Нетании</a></li>
-                <li class="menu-item"><a href="#">Знакомства в Ашдоде</a></li>
-              </ul>
-            </li>
-            <li class="menu-item"><a href="#">Блог</a></li>
-            <li class="menu-item"><a href="#">Отзывы</a></li>
-            <li class="menu-item"><a href="#">Контакты</a></li>
-          </ul>
           <div class="lang">
             <button class="lang__btn_small" id="lang-header">
               <svg class="sprite">
@@ -58,52 +58,171 @@
             </ul>
           </div>
           <button class="btn-secondary" id="application">Оставить заявку</button>
+          <button class="mobile-menu">
+            <svg class="sprite"> 
+              <use href="./images/sprite.svg#menu"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="main__test">
-        <h1 class="title2">Test page</h1>
+        <section class="home-story">
+          <div class="slider__wrapper"> 
+            <div class="slider"> 
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider1.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Григорий и Галина</h3></a>
+                  <p>Одна из самых первых пар, которые познакомились на сайте знакомств Elmi. Проживают в Хайфе и уже отпраздновали 15 лет счастливой совместной жизни!.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider2.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Диана и Яков</h3></a>
+                  <p>Диана и Яков познакомились в сентябре 2015 года, и с тех пор больше никогда не расставались. И почти через год после первой встречи, в торжественной обстановке в очень красивом месте с удивительным видом они стали мужем и женой. Символично, что первая встреча у этой пары состоялась в сотне метров от места, где они стояли под хупой. Совет да любовь!</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider3.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Юлия и Дан</h3></a>
+                  <p>Горжусь и любуюсь этой парой. Отношения у них развивались стремительно. Дан и Юлия познакомились в начале лета. А уже в конце августа Дан сделал Юлии предложение руки и сердца. И получил положительный ответ! В декабре состоялась регистрация брака в Праге. Совет да любовь!</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider4.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Зоя и Аарон</h3></a>
+                  <p>Очень гармоничная пара! Зоя и Аарон вместе уже больше 2-х лет. А недавно они закрепили свои отношения, зарегистрировав брак на Кипре. Желаю всем такого же уважительного, чуткого и внимательного отношения друг к другу.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider5.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Вера и Виталий</h3></a>
+                  <p>К счастью, эта пара сложилась, и у них уже родился чудесный ребенок, а могло помешать… расстояние. Это звучит парадоксально, но в нашем маленьком Израиле, расстояние – существенный фактор. На момент знакомства Вера жила на Севере, а Виталий – на Юге. И девушка категорически отказывалась знакомиться с молодым человеком, который живет так далеко. Пришлось приложить небольшие усилия и убедить Веру встретиться с Виталием. А вдруг, это судьба? На самом деле, после первой встречи, они больше не расставались. Это пример женской гибкости и открытости, мужской уверенности и настойчивости. Пусть радостные улыбки всегда будут на этих лицах!</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider6.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Яна и Андрей</h3></a>
+                  <p>Необычную историю знакомства этой пары услышали все гости на их свадьбе. Ее рассказал раввин, оказав мне, как свахе, честь и уважение. Яна и Андрей обратились в службу знакомств “Elmi” и никак не могли найти то, что называется второй половинкой. Однажды я пригласила Яну на танцевальный вечер знакомств, пообещав, что туда должен прийти молодой человек, с которым ей будет интересно познакомиться. Яна пообещала прийти. Андрею я тоже заранее сообщила, что на вечере будет девушка, на которую, я рекомендую обратить внимание. Казалось бы, все должно было сложиться по заранее задуманному сценарию, но… Яна пришла на вечер со значительным опозданием. И, когда я подвела ее к столику, за которым сидел Андрей, чтобы представить их друг другу, возникла неловкая ситуация. Рядом с Андреем сидела девушка, которая всем своим видом давала понять, что «это ее парень». Только в конце вечеринки Андрею удалось пригласить Яну на танец. Но соперница немедленно сообщила Яне, что у той нет шансов. У Яны хватило чувства юмора с улыбкой принять ситуацию. А мне захотелось ее приободрить и я уверенным голосом сказала, что с Андреем давно знакома и почти уверена, что утром он мне позвонит и попросит сообщить ее номер телефона. И на этот раз, интуиция меня не подвела! Андрей действительно позвонил мне утром, я сообщила ему телефон Яны. И с этого дня они уже были вместе. Через полгода Яна и Андрей сыграли свадьбу, у них родилась дочка. Свою историю знакомства, я думаю, они расскажут своей дочурке, когда она подрастет.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider7.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Елена и Лев</h3></a>
+                  <p>Лев обратился в службу знакомств “Elmi” в очень юном возрасте – в 24 года. Я заранее предупредила, что в моем каталоге очень мало девушек — его ровесниц … Но молодой человек был настроен решительно. Лена оказалась первой девушкой, с которой я ему предложила познакомиться. Молодые люди понравились друг другу, начали встречаться. И ровно через год, буквально, день в день после первой встречи, я уже была приглашена на свадьбу. У молодой пары растет сын.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider8.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Юля и Андрей</h3></a>
+                  <p>Андрей приехал в Израиль еще школьником, поэтому когда он обратился в службу знакомств “Elmi”, даже не мог предположить, что та, которую он ищет, живет вовсе не в Израиле.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider9.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Хава и Игорь</h3></a>
+                  <p>Какая красивая пара! Игорь часто приезжал с приятелями на танцевальные вечера. Но, к сожалению, каждый раз уходил один, ни разу так и не встретив девушку, с которой ему бы захотелось познакомиться. После очередной такой неудачи, я предложила Игорю заглянуть ко мне в офис и познакомиться с каталогом службы знакомств “Elmi”. Возможно, там найдется девушка, которая его заинтересует. Милых и симпатичных девушек было не мало, но свой взор он остановил на Хаве. И не удивительно — такая красавица не могла остаться без внимания. В дальнейшем, события развивались очень быстро. Через неделю после знакомства Хава пригласила Игоря отпраздновать Рош Хашана в ее семье. И вскоре Игорь подарил будущей невесте кольцо. Состоялась помолвка. А уже через полгода – свадьба. У этой пары родилась очаровательная дочь. От всего сердца я желаю счастья, здоровья и процветания молодой семье.</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="slider__img-block"><img data-lazy="./images/slider/slider10.webp"></div>
+                <div class="slider__text"><a htef="#">
+                    <h3>Александрина и Александр</h3></a>
+                  <p>Как гармонична эта пара! Это проявляется даже в звучании имени невесты и жениха. Умные, красивые, талантливые, позитивные. Этот союз проверен временем. Счастья вам, мои дорогие!</p>
+                  <button class="btn-text">Подробнее
+                    <svg class="sprite">
+                      <use href="./images/sprite.svg#right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slider__bottom"></div>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="footer"> 
-      <div class="content">
+      <div class="content"> 
         <div class="footer__top">
-          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./images/logo.png" alt="Logo"></a>
-            <p class="logo__text">Центр создания семьи</p>
+          <div class="logo"><a href="index.html"><img src="./images/logo.webp" alt="Logo"></a>
+            <p>Центр создания семьи</p>
           </div>
           <div class="footer__center">
-            <div class="footer__contact">
-              <h2 class="footer__title">Контакты</h2>
-              <p class="footer__text">ул. Герцель 16, офис 212 , Хайфа</p>
-              <p class="footer__text">054 760 79 40</p>
-              <p class="footer__text">elmi4u@gmail.com</p>
-            </div>
-            <div class="footer__contact">
-              <h2 class="footer__title">Присоединяйтесь</h2><a class="footer__text" href="#">Facebook</a><a class="footer__text" href="#">YouTube</a>
-            </div>
+            <h4>Контакты</h4>
+            <p>ул. Герцель 16, офис 212 , Хайфа</p>
+            <p>054 760 79 40</p>
+            <p>elmi4u@gmail.com</p>
+            <h4>Присоединяйтесь</h4><a href="https://www.facebook.com/znakomstvaelmi" target="_ablank">Facebook</a><a href="https://www.youtube.com/channel/UCclp96kyddDRx69tsfPKRfQ" target="_ablank">YouTube</a>
           </div>
-          <form class="footer__form" name="footer">
-            <h2 class="footer__title">Задать вопрос</h2>
-            <div class="block">
-              <label class="label">
-                <input class="input" name="name" required placeholder="Имя*">
-              </label>
-              <label class="label">
-                <input class="input" name="email" required placeholder="Email*">
-              </label>
-              <label class="label">
-                <input class="input" name="phone" placeholder="Телефон">
-              </label>
-              <label class="label">
-                <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
-              </label>
-            </div>
-            <input class="btn-secondary" type="submit" value="Отправить">
-          </form>
+          <div class="footer__form">
+            <h4>Задать вопрос</h4>
+            <form name="footer">
+              <input class="input" name="name" required placeholder="Имя*">
+              <input class="input" name="email" required placeholder="Email*">
+              <input class="input" name="phone" placeholder="Телефон">
+              <textarea class="input" name="question" required placeholder="Ваш вопрос..."></textarea>
+              <input class="btn-secondary" type="submit" value="Отправить">
+            </form>
+          </div>
         </div>
         <div class="footer__bottom">
-          <p class="footer__signature">elmi4u.com 2012-2023 © Все права защищены</p><a class="footer__signature" href="#">Политика конфиденциальности</a>
+          <p>elmi4u.com 2012-2023 © Все права защищены</p><a href="#">Политика конфиденциальности</a>
           <div class="lang">
             <button class="lang__btn_large" id="lang-footer">
               <svg class="sprite">
@@ -121,6 +240,8 @@
         </div>
       </div>
     </footer>
-    <script src="./scripts/main.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,56 @@
+// ---------- brand colors -----------
+$red: #F9605A;
+// $red: violet;
+$red_dark: #BA4B4E;
+$red_logo: #953031;
+
+// ---------- additional colors -----------
+$purple02: #F9FAFD;
+$purple03: #EAEEFA;
+$purple01: #D4DBF5;
+$purple05: #B4C0ED;
+$purple04: #A2AFDF;
+$purple09: #7D8BBD;
+$purple06: #6B769D;
+$purple08: #4A526F;
+// $purple07: #34394E;
+
+// ---------- neutral colors -----------
+$black: #1F253B;
+// $black: violet;
+$white: #FBFBFB;
+// $white: violet;
+$gray: #666A71;
+$gray_light: #AAB0BD;
+$gray_light_extra: #CCD4E3;
+
+// ---------- background -----------
+$input_background: rgba(251, 251, 251, 0.60);
+// $input_background: rgba(251, 251, 251, 0.20);
+$block_gradient: linear-gradient(180deg, #FFFFFF00 0%, #EAEEFA 100%);
+$form_gradient: linear-gradient(180deg, #EAEEFA00 0%, #EAEEFA 100%);
+$blur_left: linear-gradient(90deg, #FBFBFB 0%, rgba(251, 251, 251, 0.00) 100%);
+$blur_right: linear-gradient(-90deg, #FBFBFB 0%, rgba(251, 251, 251, 0.00) 100%);
+
+
+
+// ---------- state colors -----------
+$red_error: #F80000;
+
+// ---------- size -----------
+// $main_padding: 
+
+
+// ---------- for testing -----------
+
+$test-p: pink;
+$test-b: blue;
+$test-v: violet;
+$test-bi: bisque;
+$test-lg: lightgreen;
+$test-g: gray;
+
+// ---------- transition time -----------
+
+$time_change_color: .25s;
+$time_show_menu: .5s;

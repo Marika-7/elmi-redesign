@@ -28,42 +28,48 @@
 
 -------------------- task --------------------
 
-  pre
+  task
+
+  global
     fonts
+      ? підключити шрифти локально
     images
-    svg-sprite
+      png => webp
+      are need 2x, 3x?
+      svg-sprite (symbol, view)
   header
     logo
     nav
+      add icons to css(sprite_view.svg)
+      яким буде submenu?
       submenu 1
       submenu 2
-        add icons inline to html
     lang
     button
     mobile menu
   footer
-    incert social links
     add adaptive
-    form - edit styles
   home
     banner
-      new bg
       btn onclick
     about
     video
+      картинка-заглушка
+      оптимізація завантаження
     whom
-      edit icons (кривий бордер)
-      вирівняти тексти по вертикалі
     how
+      remake (with adaptive)
     what
-      li - edit styles
     faq
+      close blocks on wordpress
     step
       btn onclick
     trust
+      ? counts - add animation
     story
-      add slider
+      slider - adaptive
     price
+      remake table
       btn onclick
 
   --------------------
@@ -84,6 +90,42 @@
     final
       delete test.pug, test.scss, test colors comments
 
+-------------------- js --------------------
+
+  slider
+  lang
+    change language (header, footer)
+  details
+    home
+      how
+      what
+  buttons
+    header
+      Оставить заявку
+    footer
+      Отправить
+    home
+      Хочу
+      Зарегистрируйся
+      Оставить заявку
+      Оставить заявку
+      Оставить заявку
+
+-------------------- links --------------------
+
+  global
+    fonts
+  header
+    logo
+    nav-menu
+  footer
+    logo
+    facebook - https://www.facebook.com/znakomstvaelmi
+    youtube - https://www.youtube.com/channel/UCclp96kyddDRx69tsfPKRfQ
+    Политика конфиденциальности
+  home
+    https://www.youtube.com/watch?v=d2B3Xmc97vI
+
 -------------------- images --------------------
 
 -------------------- sprite --------------------
@@ -99,10 +141,16 @@
     hearts_bg_blue
     hearts_bg_red
     incognito_bg_blue
+    left_slider
+    menu
+    minus
     no
     person_heart_bg_blue
     person_star_bg_blue
     persons_bg_blue
+    plus
+    right
+    right_slider
     rings
     rings_bg_blue
     user
@@ -113,7 +161,9 @@
     check-bg_blue
     check-bg_red
     heart_red
+    left_slider
     question_bg_blue
+    right_slider
 
     call_bg_red
     check-circle
@@ -122,17 +172,11 @@
     gantt-chart
     home
     info
-    left_slider
     log-in
     map-pin
     map-pin_bg_red
     map
-    menu
     message
-    minus
-    plus
-    right
-    right_slider
     search
     skype_bg_red
     up
@@ -148,6 +192,7 @@
   git commit -m "edit header; footer"
   git commit -m "home, part 1"
   git commit -m "home, part 2"
+  git commit -m "home slider"
 
 -------------------- npm --------------------
 
@@ -160,5 +205,12 @@
   npm i -D gulp-concat gulp-uglify
   npm i -D browser-sync gulp-clean
   npm i -D gulp-svg-sprite
+  npm i -D gulp-imagemin@7.1.0
+  npm i -D gulp-newer gulp-webp@4.0.1
+  npm i -D gulp-fonter gulp-ttf2woff2
+
 
   gulp
+  gulp sprite
+  gulp images
+  gulp fonts

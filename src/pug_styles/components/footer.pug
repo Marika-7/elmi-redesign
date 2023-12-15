@@ -1,0 +1,40 @@
+footer.footer 
+  .content 
+
+    .footer__top
+      .logo
+        a(href="index.html")
+          img(src="./images/logo.webp" alt="Logo")
+        p Центр создания семьи
+      
+      .footer__center
+        h4 Контакты
+        p ул. Герцель 16, офис 212 , Хайфа
+        p 054 760 79 40
+        p elmi4u@gmail.com
+        h4 Присоединяйтесь
+        a(href="https://www.facebook.com/znakomstvaelmi" target="_ablank") Facebook
+        a(href="https://www.youtube.com/channel/UCclp96kyddDRx69tsfPKRfQ" target="_ablank") YouTube
+      
+      .footer__form
+        h4 Задать вопрос
+        form(name="footer")
+          input.input(name="name" required placeholder='Имя*')
+          input.input(name="email" required placeholder='Email*')
+          input.input(name="phone" placeholder='Телефон')
+          textarea.input(name="question" required placeholder='Ваш вопрос...')
+          input.btn-secondary(type="submit" value="Отправить") 
+    
+    .footer__bottom
+      p elmi4u.com 2012-2023 © Все права защищены
+      a(href="#") Политика конфиденциальности
+      .lang
+        button.lang__btn_large(id="lang-footer")
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+          span Русский
+          svg.sprite
+            use(href="./images/sprite.svg#down")
+        ul.lang__menu2.menu_hide(id="lang-footer-menu")
+          li.lang__item2 עברית
+          li.lang__item2.lang__active2 Русский

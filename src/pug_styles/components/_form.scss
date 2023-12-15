@@ -1,0 +1,93 @@
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 24px;
+//   position: relative;
+// }
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  background-color: $input_background;
+  border: 1px solid $gray-light;
+  border-radius: 11px;
+  color: $purple08;
+  caret-color: $purple04;
+@include font(16px, 500, 150%);
+  &:focus {
+    border-color: $purple04;
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+textarea {
+  height: 87px;
+}
+
+.input_success {
+  border-color: $purple08;
+}
+.input_error {
+  border-color: $red-error;
+}
+
+::placeholder {
+  color: $gray-light;
+}
+
+// input[type="submit"], 
+// input[type="button"] {
+//   margin-bottom: 0;
+// }
+
+
+//  contact form 7
+.wpcf7-not-valid-tip {
+  margin: -4px;
+  color: $red_error;
+  font-size: 14px;
+  position: absolute;
+}
+.wpcf7-spinner {
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+}
+.wpcf7 form .wpcf7-response-output {
+  margin: 24px 0 0;
+  padding: 0.2em 0.6em;
+  font-size: 18px;
+}
+
+label {
+  width: 100%;
+  position: relative;
+  @include font(16px, 500, 150%);
+  &:has(:disabled) {
+    opacity: 0.5;
+  }
+  input {
+  margin-top: 8px;
+  border-radius: 4px;
+  caret-color: $purple04;
+  }
+  &:focus {
+    border-color: $purple09;
+  }
+  .input_error {
+    border-color: $red;
+  }
+  .wpcf7-not-valid-tip {
+    color: $red;
+  }
+}
+
+// .input::file-selector-button {
+//   padding: 4px;
+//   background-color: #B4C0ED;
+//   border: none;
+//   border-radius: 6px;
+// }

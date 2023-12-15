@@ -1,0 +1,66 @@
+header.header 
+  //- a(href='test.html') Test
+  .content 
+    .logo
+      a(href="index.html")
+        img(src="./images/logo.webp" alt="Logo")
+      p Центр создания семьи
+
+    ul.nav
+      li.menu-item.current_page_item
+        a(href="index.html") Главная
+      li.menu-item
+        a(href="#") О нас
+      li.menu-item.menu-item-has-children
+        a(href="#") Знакомства для брака
+        ul.sub-menu
+          li.menu-item
+            a(href="#") Знакомства для серьезных отношений
+          li.menu-item
+            a(href="#") Знакомства 20-30
+          li.menu-item
+            a(href="#") Знакомства за 30
+          li.menu-item
+            a(href="#") Знакомства за 40
+          li.menu-item
+            a(href="#") Знакомства за 50
+          li.menu-item
+            a(href="#") Знакомства за 60+
+          li.menu-item
+            a(href="#") Брачное агентство в Израиле
+      li.menu-item.menu-item-has-children
+        a(href="#") Знакомства в Израиле
+        ul.sub-menu
+          li.menu-item
+            a(href="#") Знакомства в Израиле на русском языке
+          li.menu-item
+            a(href="#") Знакомства в Хайфе
+          li.menu-item
+            a(href="#") Знакомства в Тель-Авиве
+          li.menu-item
+            a(href="#") Знакомства в Нетании
+          li.menu-item
+            a(href="#") Знакомства в Ашдоде
+      li.menu-item
+        a(href="#") Блог
+      li.menu-item
+        a(href="#") Отзывы
+      li.menu-item
+        a(href="#") Контакты
+      //- li.menu-item
+      //-   a(href="test.html") Test
+          
+    .header__right
+      .lang
+        button.lang__btn_small(id="lang-header")
+          svg.sprite
+            use(href="./images/sprite.svg#earth")
+        ul.lang__menu1.menu_hide(id="lang-header-menu")
+          li.lang__item1.lang__active1 Русский
+          li.lang__item1 עברית 
+
+      button.btn-secondary(id="application") Оставить заявку
+
+      button.mobile-menu
+        svg.sprite 
+          use(href="./images/sprite.svg#menu")
