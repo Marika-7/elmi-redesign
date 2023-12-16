@@ -1,0 +1,265 @@
+// .home-price {}
+
+.table {
+  border-top: 1px solid $purple05;
+  border-radius: 14px;
+  transition: all .3s;
+  display: grid;
+  grid-template-columns: calc(100% - 213px * 3) repeat(3, 213px);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  @include screen-1024 {
+    grid-template-columns: calc(100% - 213px * 2) repeat(3, 213px);
+  }
+  @include screen-768 {
+    grid-template-columns: calc(100% - 213px) repeat(3, 213px);
+  }
+  @include screen-640 {
+    grid-template-columns: calc(100% - 178px) repeat(3, 178px);
+  }
+  @include screen-480 {
+    grid-template-columns: calc(100% - 150px) repeat(3, 150px);
+  }
+  // cell
+  &__cell {
+    min-width: 213px;
+    margin: -1px 0 0 -1px;
+    padding: 10px;
+    border: 1px solid $purple05;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include screen-640 {
+      min-width: 178px;
+    }
+    @include screen-480 {
+      min-width: 150px;
+    }
+    // first column
+    &:nth-child(4n+1) {
+      padding: 24px 16px;
+      text-align: left;
+      align-items: start;
+      position: sticky;
+      left: 0;
+      @include screen-640 {
+        padding: 16px;
+      }
+      @include screen-480 {
+        padding: 10px;
+      }
+    }
+    // background
+    &:nth-child(8n+5),
+    &:nth-child(8n+6),
+    &:nth-child(8n+7),
+    &:nth-child(8n+8) {
+      background-color: $purple02;
+    }
+    &:nth-child(8n+9),
+    &:nth-child(8n+10),
+    &:nth-child(8n+11),
+    &:nth-child(8n+12) {
+      background-color: $white;
+    }
+    // table radius
+    &:nth-child(1) {
+      border-top-left-radius: 14px;
+    }
+    &:nth-child(4) {
+      border-top-right-radius: 14px;
+    }
+    &:nth-last-child(4) {
+      border-bottom-left-radius: 14px;
+    }
+    &:nth-last-child(1) {
+      border-bottom-right-radius: 14px;
+    }
+  }
+  // header
+  &__header {
+    height: 159px;
+    background-color: $purple04;
+    color: $white;
+    @include font(24px, 700, normal);
+    align-self: stretch;
+    @include screen-640 {
+      height: 144px;
+      font-size: 18px;
+    }
+  }
+  // hover
+  .hover {
+    background-color: $purple03;
+  }
+  &__header.hover {
+    background-color: $purple09;
+  }
+  // content
+  &__cell p {
+    @include font(18px, 500, 150%);
+    @include screen-480 {
+      font-size: 16px;
+    }
+  }
+  &__cell span {
+    @include font(16px, 400, 150%);
+    @include screen-480 {
+      font-size: 14px;
+    }
+  }
+  &:nth-child(4n+1) {
+    p {
+      font-size: 20px;
+      @include screen-640 {
+        font-size: 18px;
+      }
+      @include screen-480 {
+        font-size: 16px;
+      }
+    }
+    span {
+      margin-top: 4px;
+      &:first-of-type {
+        margin-top: 8px;
+      }
+    }
+  }
+  svg {
+    width: 36px;
+    height: 36px;
+    fill: $purple01;
+    @include screen-480 {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__cell.hover {
+    svg {
+      fill: $purple02;
+    }
+  }
+  .btn-main {
+    width: 100%;
+    padding: 5px 10px;
+    @include font(18px, 600, 150%);
+    box-shadow: 0px 3px $red_dark;
+    @include screen-640 {
+      padding: 5px 20px;
+      font-size: 14px;
+      line-height: 100%;
+    }
+    &:hover {
+      margin-top: -3px;
+      margin-bottom: 3px;
+      box-shadow: 0px 6px $red_dark;
+    }
+  }
+  .table__cell:has(.btn-main) {
+    min-height: 118px;
+  }
+}
+
+
+// .table {
+//   width: 100%;
+// }
+// // thead {}
+// // tbody {}
+// // tr {}
+// th, td {
+//   width: 213px;
+//   border-right: 1px solid $purple05;
+//   border-bottom: 1px solid $purple05;
+//   text-align: center;
+//   &:first-of-type {
+//     width: 600px;
+//     border-left: 1px solid $purple05;
+//     text-align: left;
+//   }
+// }
+// th {
+//   padding: 16px 16px;
+//   background-color: $purple04;
+//   border-top: 1px solid $purple05;
+//   color:  $white;
+//   height: 144px;
+//   @include font(14px, 500, 150%);
+//   text-transform: uppercase;
+//   &:first-of-type {
+//     padding: 16px 24px;
+//     @include font(20px, 500, 150%);
+//   }
+//   &:hover {
+//     background-color: $purple09;
+//   }
+//   p {
+//     margin-top: 4px;
+//     @include font(26px, 700, 100%);
+//   }
+// }
+// td {
+//   padding: 10px 10px;
+//   &:first-of-type {
+//     padding: 16px 24px;
+//   }
+//   p {
+//     margin-top: 4px;
+//     color: $gray;
+//     @include font(16px, 400, 150%);
+//     &:first-of-type {
+//       margin-top: 8px;
+//     }
+//   }
+//   svg {
+//     width: 36px;
+//     height: 36px;
+//     fill: $purple03;
+//   }
+//   &:hover {
+//     background-color: $purple03;
+//     svg {
+//       fill: $purple02;
+//     }
+//   }
+//   .btn-block {
+//     height: 118px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .btn-main {
+//     // width: 193px;
+//     width: 100%;
+//     height: 37px;
+//     padding: 6px 10px;
+//     @include font(18px, 500, 150%);
+//     box-shadow: 0px 3px $red_dark;
+//     &:hover {
+//       margin-top: -3px;
+//       margin-bottom: 3px;
+//       box-shadow: 0px 6px $red_dark;
+//     }
+//   }
+// }
+// tr:nth-of-type(odd) {
+//   background: $purple02;
+// }
+// tr:nth-of-type(even) {
+//   background: $white;
+// }
+// // table radius
+// thead tr:first-of-type th:first-of-type {
+//   border-top-left-radius: 14px;
+// }
+// thead tr:first-of-type th:last-of-type {
+//   border-top-right-radius: 14px;
+// }
+// tbody tr:last-of-type td:last-of-type {
+//   border-bottom-right-radius: 14px;
+// }
+// tbody tr:last-of-type td:first-of-type {
+//   border-bottom-left-radius: 14px;
+// }

@@ -1,6 +1,12 @@
 // ---------- test page -----------
 .main__test {
   padding: 40px;
+  @include screen-768 {
+    padding: 20px;
+  }
+  @include screen-480 {
+    padding: 10px;
+  }
 }
 
 .test-btn {

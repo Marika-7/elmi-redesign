@@ -57,11 +57,12 @@ function deleteBuild(cb) {
   return src([
     'docs/**/*.*', 
     '!docs/fonts/*.*',
-    '!docs/images/*.*',
+    '!docs/images/**/*.*',
     '!docs/robots.txt',
     '!docs/favicon.png',
     '!docs/js/jquery-3.7.1.min.js',
-    '!docs/js/slick.min',
+    '!docs/js/slick.min.js',
+    '!docs/js/jquery.responsivetable.min.js',
   ])
     .pipe(clean());
 }

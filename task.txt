@@ -67,9 +67,10 @@
     trust
       ? counts - add animation
     story
-      slider - adaptive
     price
-      remake table
+      adaptive
+      border
+      draggable
       btn onclick
 
   --------------------
@@ -93,6 +94,7 @@
 -------------------- js --------------------
 
   slider
+  table
   lang
     change language (header, footer)
   details

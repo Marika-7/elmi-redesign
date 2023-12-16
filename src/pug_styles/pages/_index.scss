@@ -477,7 +477,7 @@
   width: 100%;
   padding-top: 27px;
   background: 
-    url('../images/bg_home_step.svg')
+    url('../images/home_step_bg.svg')
     center center
     no-repeat;
   .step__wrapper {
@@ -611,104 +611,5 @@
 
 .home-price {
   // h2 {}
-  .table {
-    width: 100%;
-  }
-  // thead {}
-  // tbody {}
-  // tr {}
-  th, td {
-    width: 213px;
-    border-right: 1px solid $purple05;
-    border-bottom: 1px solid $purple05;
-    text-align: center;
-    &:first-of-type {
-      width: 600px;
-      border-left: 1px solid $purple05;
-      text-align: left;
-    }
-  }
-  th {
-    padding: 16px 16px;
-    background-color: $purple04;
-    border-top: 1px solid $purple05;
-    color:  $white;
-    height: 144px;
-    @include font(14px, 500, 150%);
-    text-transform: uppercase;
-    &:first-of-type {
-      padding: 16px 24px;
-      @include font(20px, 500, 150%);
-    }
-    &:hover {
-      background-color: $purple09;
-    }
-    p {
-      margin-top: 4px;
-      @include font(26px, 700, 100%);
-    }
-  }
-  td {
-    padding: 10px 10px;
-    &:first-of-type {
-      padding: 16px 24px;
-    }
-    p {
-      margin-top: 4px;
-      color: $gray;
-      @include font(16px, 400, 150%);
-      &:first-of-type {
-        margin-top: 8px;
-      }
-    }
-    svg {
-      width: 36px;
-      height: 36px;
-      fill: $purple03;
-    }
-    &:hover {
-      background-color: $purple03;
-      svg {
-        fill: $purple02;
-      }
-    }
-    .btn-block {
-      height: 118px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .btn-main {
-      // width: 193px;
-      width: 100%;
-      height: 37px;
-      padding: 6px 10px;
-      @include font(18px, 500, 150%);
-      box-shadow: 0px 3px $red_dark;
-      &:hover {
-        margin-top: -3px;
-        margin-bottom: 3px;
-        box-shadow: 0px 6px $red_dark;
-      }
-    }
-  }
-  tr:nth-of-type(odd) {
-    background: $purple02;
-  }
-  tr:nth-of-type(even) {
-    background: $white;
-  }
-  // table radius
-  thead tr:first-of-type th:first-of-type {
-    border-top-left-radius: 14px;
-  }
-  thead tr:first-of-type th:last-of-type {
-    border-top-right-radius: 14px;
-  }
-  tbody tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: 14px;
-  }
-  tbody tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: 14px;
-  }
+  // .table {}
 }

@@ -12,7 +12,7 @@
 h2, 
 .title2 {
   margin-bottom: 64px;
-  @include font(46px, 700, 100%);
+  @include font(46px, 700, normal);
   text-transform: uppercase;
   text-align: center;
   // @include screen-1024 {
@@ -32,7 +32,7 @@ h2,
 h3, 
 .title3 {
   margin-bottom: 16px;
-  @include font(30px, 700, 100%);
+  @include font(30px, 700, normal);
   text-align: center;
   @include screen-1024 {
     // margin-bottom: 24px;
@@ -57,7 +57,7 @@ h4,
 }
 
 // h5, .title5 {
-//   @include font(26px, 700, 100%);
+//   @include font(26px, 700, normal);
 //  text-align: left;
 // }
 
