@@ -28,6 +28,21 @@ $(document).ready(function () {
 
   // table
   setTableProperty();
+
+  // ---------- dl ----------
+  setDlProperty();
+  function setDlProperty() {
+    $('.how__dt').click(toggleDlClass);
+  }
+  function toggleDlClass(event) {
+    $('.how__dd').each(function (index, elem) {
+      if (elem === event.target.nextElementSibling) {
+        return;
+      }
+      elem.classList.remove('how__dd_open');
+    });
+    event.target.nextElementSibling.classList.toggle('how__dd_open');
+  }
 });
 
 // ---------- table ----------
@@ -42,30 +57,30 @@ function setTableProperty() {
     }
     $(this).attr('data-col', index % 4);
   }).on({
-    'mouseenter': addHover,
-    'mouseleave': deleteHover
+    'mouseenter': addTableClass,
+    'mouseleave': deleteTableClass
     // 'mousedown': setTrue,
     // 'mouseup': setFalse,
     // 'mousemove': swipeTable,
   });
 }
-// add class 'hover'
-function addHover(event) {
+// add class 'table__hover'
+function addTableClass(event) {
   var prevIndex = event.relatedTarget.hasAttribute('data-col') ? event.relatedTarget.getAttribute('data-col') : '-1';
   var currentIndex = event.target.hasAttribute('data-col') ? event.target.getAttribute('data-col') : '-1';
   if (currentIndex === prevIndex) {
     return;
   }
-  $("[data-col=\"".concat(currentIndex, "\"]")).addClass('hover');
+  $("[data-col=\"".concat(currentIndex, "\"]")).addClass('table__hover');
 }
-// delete class 'hover'
-function deleteHover(event) {
+// delete class 'table__hover'
+function deleteTableClass(event) {
   var nextIndex = event.relatedTarget.hasAttribute('data-col') ? event.relatedTarget.getAttribute('data-col') : '-1';
   var currentIndex = event.target.hasAttribute('data-col') ? event.target.getAttribute('data-col') : '-1';
   if (currentIndex === nextIndex) {
     return;
   }
-  $("[data-col=\"".concat(currentIndex, "\"]")).removeClass('hover');
+  $("[data-col=\"".concat(currentIndex, "\"]")).removeClass('table__hover');
 }
 
 // function setTrue(event) {

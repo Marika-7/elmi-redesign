@@ -28,6 +28,23 @@ $(document).ready(function(){
 
   // table
   setTableProperty();
+
+  // ---------- dl ----------
+  setDlProperty();
+
+  function setDlProperty() {
+    $('.how__dt').click(toggleDlClass);
+  }
+
+  function toggleDlClass(event) {
+    $('.how__dd').each(function(index, elem) {
+      if(elem === event.target.nextElementSibling) {
+        return;
+      }
+      elem.classList.remove('how__dd_open');
+    });
+    event.target.nextElementSibling.classList.toggle('how__dd_open');
+  }
 });
 
 // ---------- table ----------
@@ -43,15 +60,15 @@ function setTableProperty() {
       }
       $(this).attr('data-col', index%4);
     }).on({
-      'mouseenter': addHover,
-      'mouseleave': deleteHover,
+      'mouseenter': addTableClass,
+      'mouseleave': deleteTableClass,
       // 'mousedown': setTrue,
       // 'mouseup': setFalse,
       // 'mousemove': swipeTable,
     });
 }
-// add class 'hover'
-function addHover (event) {
+// add class 'table__hover'
+function addTableClass (event) {
   let prevIndex = event.relatedTarget.hasAttribute('data-col') 
     ? event.relatedTarget.getAttribute('data-col') 
     : '-1';
@@ -61,10 +78,10 @@ function addHover (event) {
   if(currentIndex === prevIndex) {
     return;
   }
-  $(`[data-col="${currentIndex}"]`).addClass('hover');
+  $(`[data-col="${currentIndex}"]`).addClass('table__hover');
 }
-// delete class 'hover'
-function deleteHover (event) {
+// delete class 'table__hover'
+function deleteTableClass (event) {
   let nextIndex = event.relatedTarget.hasAttribute('data-col') 
     ? event.relatedTarget.getAttribute('data-col') 
     : '-1';
@@ -74,7 +91,7 @@ function deleteHover (event) {
     if(currentIndex === nextIndex) {
       return;
     }
-  $(`[data-col="${currentIndex}"]`).removeClass('hover');
+  $(`[data-col="${currentIndex}"]`).removeClass('table__hover');
 }
 
 // function setTrue(event) {

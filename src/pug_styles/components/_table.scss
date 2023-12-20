@@ -91,10 +91,10 @@
     }
   }
   // hover
-  .hover {
+  &__cell.table__hover {
     background-color: $purple03;
   }
-  &__header.hover {
+  &__header.table__hover {
     background-color: $purple09;
   }
   // content
@@ -136,7 +136,7 @@
       height: 32px;
     }
   }
-  &__cell.hover {
+  &__cell.table__hover {
     svg {
       fill: $purple02;
     }

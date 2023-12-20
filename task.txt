@@ -29,6 +29,13 @@
 -------------------- task --------------------
 
   task
+    виправити семантику:
+      Подробнее - посилання, а не кнопка
+      інпутам додати лейбл(навіть невидимий)
+      article
+      description list
+      title to sections & articles
+      adress
 
   global
     fonts
@@ -68,8 +75,6 @@
       ? counts - add animation
     story
     price
-      adaptive
-      border
       draggable
       btn onclick
 
@@ -166,6 +171,7 @@
     left_slider
     question_bg_blue
     right_slider
+    triangle
 
     call_bg_red
     check-circle
@@ -195,6 +201,8 @@
   git commit -m "home, part 1"
   git commit -m "home, part 2"
   git commit -m "home slider"
+  git commit -m "home table"
+  git commit -m "home section how"
 
 -------------------- npm --------------------
 
